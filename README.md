@@ -16,5 +16,5 @@ bunx jsr add @saroj/date-np
 
 ### npm:
 ```bash
-npx install @saroj/date-np
+npx jsr install @saroj/date-np
 ```
