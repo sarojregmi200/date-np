@@ -1,2 +1,20 @@
 # date-np
-Nepali date package for react.
+Simple & minimal Nepali date picker that just works.
+
+> ## Back story:
+> Why create this package?
+> Because I was looking for a simple & minimal Nepali date picker that just works.
+> Found some but either they were bit qworky had bugs or they were not maintained.
+> So I decided to create my own. 
+> During my work at [Bright Software] (https://brightit.com.np)
+
+## Installation
+### bun:
+```bash
+bunx jsr add @saroj/date-np
+```
+
+### npm:
+```bash
+npx install @saroj/date-np
+```
