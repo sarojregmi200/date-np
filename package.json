@@ -33,13 +33,15 @@
     "watch:auto-gen-docs": "typedoc --watch",
     "preview:docs": "cd docs && bun run start",
     "dev": "concurrently \"bun run watch:auto-gen-docs\" \"bun run preview:docs\" -c \"green,blue\" -n \"gen-docs,preview\" ",
+    "test": "vitest",
     "publish:docs": "typedoc && cd docs && bun run deploy"
   },
   "devDependencies": {
     "@types/bun": "latest",
+    "concurrently": "^9.1.0",
     "typedoc": "^0.27.5",
     "typedoc-plugin-markdown": "^4.3.2",
-    "concurrently": "^9.1.0"
+    "vitest": "^2.1.8"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
