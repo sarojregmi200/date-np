@@ -1,51 +1,51 @@
 export const LOCALE = {
     BS: {
         MONTHS: {
-            1: {
+            0: {
                 EN: "Baishakh",
                 NP: "बैशाख",
             },
-            2: {
+            1: {
                 EN: "Jestha",
                 NP: "जेष्ठ",
             },
-            3: {
+            2: {
                 EN: "Ashadh",
                 NP: "आषाढ",
             },
-            4: {
+            3: {
                 EN: "Shrawan",
                 NP: "श्रावण",
             },
-            5: {
+            4: {
                 EN: "Bhadra",
                 NP: "भाद्र",
             },
-            6: {
+            5: {
                 EN: "Ashwin",
                 NP: "आश्विन",
             },
-            7: {
+            6: {
                 EN: "Kartik",
                 NP: "कार्तिक",
             },
-            8: {
+            7: {
                 EN: "Mangsir",
                 NP: "मार्ग",
             },
-            9: {
+            8: {
                 EN: "Poush",
                 NP: "पौष",
             },
-            10: {
+            9: {
                 EN: "Magh",
                 NP: "माघ",
             },
-            11: {
+            10: {
                 EN: "Falgun",
                 NP: "फाल्गुन",
             },
-            12: {
+            11: {
                 EN: "Chaitra",
                 NP: "चैत्र“,
             },
@@ -84,51 +84,51 @@ export const LOCALE = {
 
     AD: {
         MONTHS: {
-            1: {
+            0: {
                 EN: "January",
                 NP: "जनवरी",
             },
-            2: {
+            1: {
                 EN: "February",
                 NP: "फ़रवरी",
             },
-            3: {
+            2: {
                 EN: "March",
                 NP: "मार्च",
             },
-            4: {
+            3: {
                 EN: "April",
                 NP: "अप्रैल",
             },
-            5: {
+            4: {
                 EN: "May",
                 NP: "मई",
             },
-            6: {
+            5: {
                 EN: "June",
                 NP: "जून",
             },
-            7: {
+            6: {
                 EN: "July",
                 NP: "जुलाई",
             },
-            8: {
+            7: {
                 EN: "August",
                 NP: "अगस्त",
             },
-            9: {
+            8: {
                 EN: "September",
                 NP: "सितम्बर",
             },
-            10: {
+            9: {
                 EN: "October",
                 NP: "अक्टूबर",
             },
-            11: {
+            10: {
                 EN: "November",
                 NP: "नवम्बर",
             },
-            12: {
+            11: {
                 EN: "December",
                 NP: "दिसम्बर",
             },
