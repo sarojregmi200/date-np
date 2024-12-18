@@ -2,14 +2,6 @@
   "name": "date-np",
   "module": "index.ts",
   "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest",
-    "typedoc": "^0.27.5",
-    "typedoc-plugin-markdown": "^4.3.2"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
   "author": {
     "name": "Saroj Regmi",
     "url": "https://sarojregmi.sh"
@@ -38,8 +30,18 @@
   ],
   "scripts": {
     "dev": "bun build",
-    "generate:docs": "typedoc",
-    "dev:docs": "typedoc && cd docs && bun run start",
+    "watch:auto-gen-docs": "typedoc --watch",
+    "preview:docs": "cd docs && bun run start",
+    "dev": "concurrently \"bun run watch:auto-gen-docs\" \"bun run preview:docs\" -c \"green,blue\" -n \"gen-docs,preview\" ",
     "publish:docs": "typedoc && cd docs && bun run deploy"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typedoc": "^0.27.5",
+    "typedoc-plugin-markdown": "^4.3.2",
+    "concurrently": "^9.1.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
   }
 }
