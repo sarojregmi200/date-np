@@ -1,10 +1,14 @@
 /**  @type {import("typedoc").TypeDocOptions} */
 const config = {
-  entryPoints: ["./src/index.ts"],
-  out: "./docs/docs/",
-  cleanOutputDir: false,
+  entryPoints: ["./src/**/*.ts", "./utils/**/*.ts"],
+  out: "./docs/docs/auto",
+  cleanOutputDir: true,
   plugin: ["typedoc-plugin-markdown"],
-  readme: "none",
+  skipErrorChecking: true,
+  jsDocCompatibility: true,
+  commentStyle: "jsdoc",
+  emit: "docs",
+  json: "docs/docs.json",
 };
 
 export default config;

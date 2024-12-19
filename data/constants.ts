@@ -1,4 +1,4 @@
-export const BS_MONTHS_END = {
+export const BS_MONTHS = {
     2000: [30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31],
     2001: [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
     2002: [31, 31, 32, 32, 31, 30, 30, 29, 30, 29, 30, 30],
@@ -100,8 +100,15 @@ export const BS_MONTHS_END = {
     2098: [31, 31, 32, 31, 31, 31, 29, 30, 29, 30, 29, 31],
     2099: [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
 } as const
+export type BS_MONTHS = typeof BS_MONTHS;
+export type BS_MONTHS_KEYS = keyof typeof BS_MONTHS;
 
-export const AD_MONTH_END = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31] as const;
+export const AD_MONTH = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31] as const;
+export const AD_MONTH_LEAP_YEAR = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31] as const;
+export const MIN_BS_YEAR = Number(Object.keys(BS_MONTHS)[0]);
+export const MIN_AD_YEAR = 1944;
+export const MAX_BS_YEAR = Number(Object.keys(BS_MONTHS).pop());
+export const MAX_AD_YEAR = 2042;
 
 export const BS_TO_AD_MONTH = {
     0: 3,

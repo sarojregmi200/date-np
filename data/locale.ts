@@ -47,7 +47,7 @@ export const LOCALE = {
             },
             11: {
                 EN: "Chaitra",
-                NP: "चैत्र“,
+                NP: "चैत्र",
             },
         },
         DAYS: {
@@ -84,51 +84,51 @@ export const LOCALE = {
 
     AD: {
         MONTHS: {
-            0: {
+            1: {
                 EN: "January",
                 NP: "जनवरी",
             },
-            1: {
+            2: {
                 EN: "February",
                 NP: "फ़रवरी",
             },
-            2: {
+            3: {
                 EN: "March",
                 NP: "मार्च",
             },
-            3: {
+            4: {
                 EN: "April",
                 NP: "अप्रैल",
             },
-            4: {
+            5: {
                 EN: "May",
                 NP: "मई",
             },
-            5: {
+            6: {
                 EN: "June",
                 NP: "जून",
             },
-            6: {
+            7: {
                 EN: "July",
                 NP: "जुलाई",
             },
-            7: {
+            8: {
                 EN: "August",
                 NP: "अगस्त",
             },
-            8: {
+            9: {
                 EN: "September",
                 NP: "सितम्बर",
             },
-            9: {
+            10: {
                 EN: "October",
                 NP: "अक्टूबर",
             },
-            10: {
+            11: {
                 EN: "November",
                 NP: "नवम्बर",
             },
-            11: {
+            12: {
                 EN: "December",
                 NP: "दिसम्बर",
             },

@@ -1,4 +1,7 @@
+
 /**
- * Date-np is a simple & minimal Nepali date picker that just works.
- * @packageDocumentation
+ * @module date-np
+ *
+ * @description
+ * This module provides functions to Dates 
  */
