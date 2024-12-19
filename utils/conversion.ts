@@ -3,6 +3,9 @@
  * @returns {Date}
  */
 
+import { MIN_AD_YEAR } from "../data/constants";
+import { calcTotalDaysFromMinBS } from "./helpers";
+
 const convertFromADToBS = (date: Date) => {
     const AD_year = date.getFullYear();
     const AD_month = date.getMonth();
@@ -19,18 +22,20 @@ const convertFromADToBS = (date: Date) => {
     return date
 };
 
-const convertFromBSToAD = (date: Date): Date => {
-    const BS_year = date.getFullYear();
-    const BS_month = date.getMonth();
-    const BS_day = date.getDate();
+const convertFromBSToAD = (BS_date: Date): Date => {
+    const BS_year = BS_date.getFullYear();
+    const BS_month = BS_date.getMonth();
+    const BS_day = BS_date.getDate();
 
-    // TODO: Checking if the date is valid.
     const isValid = true;
     if (!isValid)
-        // TODO: create a custom error type.
         throw new Error("Invalid date");
 
-    return date;
+    const differenceDays = calcTotalDaysFromMinBS(BS_date);
+    console.log(differenceDays)
+    const AD_date = new Date(MIN_AD_YEAR, 1, differenceDays);
+
+    return AD_date;
 };
 
 export {

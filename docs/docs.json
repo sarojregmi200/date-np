@@ -1,12 +1,12 @@
 {
-	"id": 0,
+	"id": 2304,
 	"name": "date-np",
 	"variant": "project",
 	"kind": 1,
 	"flags": {},
 	"children": [
 		{
-			"id": 1,
+			"id": 2305,
 			"name": "date-np",
 			"variant": "declaration",
 			"kind": 2,
@@ -35,7 +35,7 @@
 			]
 		},
 		{
-			"id": 25,
+			"id": 2329,
 			"name": "utils",
 			"variant": "declaration",
 			"kind": 2,
@@ -50,66 +50,44 @@
 			]
 		},
 		{
-			"id": 7,
+			"id": 2311,
 			"name": "utils/conversion",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
 			"children": [
 				{
-					"id": 8,
+					"id": 2312,
 					"name": "convertFromADToBS",
 					"variant": "declaration",
 					"kind": 64,
 					"flags": {},
-					"comment": {
-						"summary": [
-							{
-								"kind": "text",
-								"text": "converts the given date from AD to BS"
-							}
-						]
-					},
 					"sources": [
 						{
 							"fileName": "utils/conversion.ts",
-							"line": 6,
+							"line": 9,
 							"character": 6,
-							"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/conversion.ts#L6"
+							"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/conversion.ts#L9"
 						}
 					],
 					"signatures": [
 						{
-							"id": 9,
+							"id": 2313,
 							"name": "convertFromADToBS",
 							"variant": "signature",
 							"kind": 4096,
 							"flags": {},
-							"comment": {
-								"summary": [
-									{
-										"kind": "text",
-										"text": "converts the given date from AD to BS"
-									}
-								],
-								"blockTags": [
-									{
-										"tag": "@returns",
-										"content": []
-									}
-								]
-							},
 							"sources": [
 								{
 									"fileName": "utils/conversion.ts",
-									"line": 6,
+									"line": 9,
 									"character": 26,
-									"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/conversion.ts#L6"
+									"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/conversion.ts#L9"
 								}
 							],
 							"parameters": [
 								{
-									"id": 10,
+									"id": 2314,
 									"name": "date",
 									"variant": "param",
 									"kind": 32768,
@@ -138,7 +116,7 @@
 					]
 				},
 				{
-					"id": 11,
+					"id": 2315,
 					"name": "convertFromBSToAD",
 					"variant": "declaration",
 					"kind": 64,
@@ -146,14 +124,14 @@
 					"sources": [
 						{
 							"fileName": "utils/conversion.ts",
-							"line": 22,
+							"line": 25,
 							"character": 6,
-							"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/conversion.ts#L22"
+							"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/conversion.ts#L25"
 						}
 					],
 					"signatures": [
 						{
-							"id": 12,
+							"id": 2316,
 							"name": "convertFromBSToAD",
 							"variant": "signature",
 							"kind": 4096,
@@ -161,15 +139,15 @@
 							"sources": [
 								{
 									"fileName": "utils/conversion.ts",
-									"line": 22,
+									"line": 25,
 									"character": 26,
-									"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/conversion.ts#L22"
+									"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/conversion.ts#L25"
 								}
 							],
 							"parameters": [
 								{
-									"id": 13,
-									"name": "date",
+									"id": 2317,
+									"name": "BS_date",
 									"variant": "param",
 									"kind": 32768,
 									"flags": {},
@@ -201,8 +179,8 @@
 				{
 					"title": "Functions",
 					"children": [
-						8,
-						11
+						2312,
+						2315
 					]
 				}
 			],
@@ -216,14 +194,14 @@
 			]
 		},
 		{
-			"id": 2,
+			"id": 2306,
 			"name": "utils/Errors",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
 			"children": [
 				{
-					"id": 3,
+					"id": 2307,
 					"name": "default",
 					"variant": "declaration",
 					"kind": 32,
@@ -240,14 +218,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 4,
+							"id": 2308,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 6,
+									"id": 2310,
 									"name": "INVALID_AD_YEAR",
 									"variant": "declaration",
 									"kind": 1024,
@@ -271,7 +249,7 @@
 									"defaultValue": "..."
 								},
 								{
-									"id": 5,
+									"id": 2309,
 									"name": "INVALID_BS_YEAR",
 									"variant": "declaration",
 									"kind": 1024,
@@ -299,8 +277,8 @@
 								{
 									"title": "Properties",
 									"children": [
-										6,
-										5
+										2310,
+										2309
 									]
 								}
 							],
@@ -320,7 +298,7 @@
 				{
 					"title": "Variables",
 					"children": [
-						3
+						2307
 					]
 				}
 			],
@@ -333,14 +311,14 @@
 			]
 		},
 		{
-			"id": 14,
+			"id": 2318,
 			"name": "utils/helpers",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
 			"children": [
 				{
-					"id": 15,
+					"id": 2319,
 					"name": "yearInput",
 					"variant": "declaration",
 					"kind": 2097152,
@@ -348,7 +326,7 @@
 					"sources": [
 						{
 							"fileName": "utils/helpers.ts",
-							"line": 67,
+							"line": 74,
 							"character": 12
 						}
 					],
@@ -381,7 +359,7 @@
 					}
 				},
 				{
-					"id": 16,
+					"id": 2320,
 					"name": "calcTotalDaysFromMinBS",
 					"variant": "declaration",
 					"kind": 64,
@@ -409,7 +387,7 @@
 					],
 					"signatures": [
 						{
-							"id": 17,
+							"id": 2321,
 							"name": "calcTotalDaysFromMinBS",
 							"variant": "signature",
 							"kind": 4096,
@@ -446,7 +424,7 @@
 							],
 							"parameters": [
 								{
-									"id": 18,
+									"id": 2322,
 									"name": "BS_date",
 									"variant": "param",
 									"kind": 32768,
@@ -478,7 +456,7 @@
 					]
 				},
 				{
-					"id": 19,
+					"id": 2323,
 					"name": "calcTotalDaysInBSYear",
 					"variant": "declaration",
 					"kind": 64,
@@ -500,13 +478,13 @@
 					"sources": [
 						{
 							"fileName": "utils/helpers.ts",
-							"line": 51,
+							"line": 54,
 							"character": 6
 						}
 					],
 					"signatures": [
 						{
-							"id": 20,
+							"id": 2324,
 							"name": "calcTotalDaysInBSYear",
 							"variant": "signature",
 							"kind": 4096,
@@ -537,13 +515,13 @@
 							"sources": [
 								{
 									"fileName": "utils/helpers.ts",
-									"line": 51,
+									"line": 54,
 									"character": 30
 								}
 							],
 							"parameters": [
 								{
-									"id": 21,
+									"id": 2325,
 									"name": "year",
 									"variant": "param",
 									"kind": 32768,
@@ -558,7 +536,7 @@
 									},
 									"type": {
 										"type": "reference",
-										"target": 15,
+										"target": 2319,
 										"name": "yearInput",
 										"package": "date-np"
 									}
@@ -572,7 +550,7 @@
 					]
 				},
 				{
-					"id": 22,
+					"id": 2326,
 					"name": "extractYear",
 					"variant": "declaration",
 					"kind": 64,
@@ -594,13 +572,13 @@
 					"sources": [
 						{
 							"fileName": "utils/helpers.ts",
-							"line": 75,
+							"line": 82,
 							"character": 6
 						}
 					],
 					"signatures": [
 						{
-							"id": 23,
+							"id": 2327,
 							"name": "extractYear",
 							"variant": "signature",
 							"kind": 4096,
@@ -631,13 +609,13 @@
 							"sources": [
 								{
 									"fileName": "utils/helpers.ts",
-									"line": 75,
+									"line": 82,
 									"character": 20
 								}
 							],
 							"parameters": [
 								{
-									"id": 24,
+									"id": 2328,
 									"name": "input",
 									"variant": "param",
 									"kind": 32768,
@@ -682,15 +660,15 @@
 				{
 					"title": "Type Aliases",
 					"children": [
-						15
+						2319
 					]
 				},
 				{
 					"title": "Functions",
 					"children": [
-						16,
-						19,
-						22
+						2320,
+						2323,
+						2326
 					]
 				}
 			],
@@ -698,25 +676,25 @@
 				{
 					"title": "Other",
 					"children": [
-						15
+						2319
 					]
 				},
 				{
 					"title": "helpers\nCalculates the total number of days from MIN_BS_YEAR to the given BS date.",
 					"children": [
-						16
+						2320
 					]
 				},
 				{
 					"title": "helpers\nCalculates the total number of days in the given BS year.",
 					"children": [
-						19
+						2323
 					]
 				},
 				{
 					"title": "helpers\nExtracts the year from the given input.",
 					"children": [
-						22
+						2326
 					]
 				}
 			],
@@ -729,14 +707,14 @@
 			]
 		},
 		{
-			"id": 26,
+			"id": 2330,
 			"name": "utils/validators",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
 			"children": [
 				{
-					"id": 33,
+					"id": 2337,
 					"name": "isADLeapYear",
 					"variant": "declaration",
 					"kind": 64,
@@ -751,7 +729,7 @@
 					],
 					"signatures": [
 						{
-							"id": 34,
+							"id": 2338,
 							"name": "isADLeapYear",
 							"variant": "signature",
 							"kind": 4096,
@@ -766,14 +744,14 @@
 							],
 							"parameters": [
 								{
-									"id": 35,
+									"id": 2339,
 									"name": "yearInput",
 									"variant": "param",
 									"kind": 32768,
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"target": 15,
+										"target": 2319,
 										"name": "yearInput",
 										"package": "date-np"
 									}
@@ -787,7 +765,7 @@
 					]
 				},
 				{
-					"id": 30,
+					"id": 2334,
 					"name": "isValidADYear",
 					"variant": "declaration",
 					"kind": 64,
@@ -802,7 +780,7 @@
 					],
 					"signatures": [
 						{
-							"id": 31,
+							"id": 2335,
 							"name": "isValidADYear",
 							"variant": "signature",
 							"kind": 4096,
@@ -817,14 +795,14 @@
 							],
 							"parameters": [
 								{
-									"id": 32,
+									"id": 2336,
 									"name": "yearInput",
 									"variant": "param",
 									"kind": 32768,
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"target": 15,
+										"target": 2319,
 										"name": "yearInput",
 										"package": "date-np"
 									}
@@ -838,7 +816,7 @@
 					]
 				},
 				{
-					"id": 27,
+					"id": 2331,
 					"name": "isValidBSYear",
 					"variant": "declaration",
 					"kind": 64,
@@ -867,7 +845,7 @@
 					],
 					"signatures": [
 						{
-							"id": 28,
+							"id": 2332,
 							"name": "isValidBSYear",
 							"variant": "signature",
 							"kind": 4096,
@@ -905,7 +883,7 @@
 							],
 							"parameters": [
 								{
-									"id": 29,
+									"id": 2333,
 									"name": "yearInput",
 									"variant": "param",
 									"kind": 32768,
@@ -920,7 +898,7 @@
 									},
 									"type": {
 										"type": "reference",
-										"target": 15,
+										"target": 2319,
 										"name": "yearInput",
 										"package": "date-np"
 									}
@@ -938,9 +916,9 @@
 				{
 					"title": "Functions",
 					"children": [
-						33,
-						30,
-						27
+						2337,
+						2334,
+						2331
 					]
 				}
 			],
@@ -948,14 +926,14 @@
 				{
 					"title": "Other",
 					"children": [
-						33,
-						30
+						2337,
+						2334
 					]
 				},
 				{
 					"title": "validators\nChecks if the given date is a valid BS date.",
 					"children": [
-						27
+						2331
 					]
 				}
 			],
@@ -973,12 +951,12 @@
 		{
 			"title": "Modules",
 			"children": [
-				1,
-				25,
-				7,
-				2,
-				14,
-				26
+				2305,
+				2329,
+				2311,
+				2306,
+				2318,
+				2330
 			]
 		}
 	],
@@ -1002,143 +980,143 @@
 		}
 	],
 	"symbolIdMap": {
-		"1": {
+		"2305": {
 			"sourceFileName": "src/index.ts",
 			"qualifiedName": ""
 		},
-		"2": {
+		"2306": {
 			"sourceFileName": "utils/Errors.ts",
 			"qualifiedName": ""
 		},
-		"3": {
+		"2307": {
 			"sourceFileName": "utils/Errors.ts",
 			"qualifiedName": "Errors"
 		},
-		"4": {
+		"2308": {
 			"sourceFileName": "utils/Errors.ts",
 			"qualifiedName": "__object"
 		},
-		"5": {
+		"2309": {
 			"sourceFileName": "utils/Errors.ts",
 			"qualifiedName": "__object.INVALID_BS_YEAR"
 		},
-		"6": {
+		"2310": {
 			"sourceFileName": "utils/Errors.ts",
 			"qualifiedName": "__object.INVALID_AD_YEAR"
 		},
-		"7": {
+		"2311": {
 			"sourceFileName": "utils/conversion.ts",
 			"qualifiedName": ""
 		},
-		"8": {
+		"2312": {
 			"sourceFileName": "utils/conversion.ts",
 			"qualifiedName": "convertFromADToBS"
 		},
-		"9": {
+		"2313": {
 			"sourceFileName": "utils/conversion.ts",
 			"qualifiedName": "convertFromADToBS"
 		},
-		"10": {
+		"2314": {
 			"sourceFileName": "utils/conversion.ts",
 			"qualifiedName": "date"
 		},
-		"11": {
+		"2315": {
 			"sourceFileName": "utils/conversion.ts",
 			"qualifiedName": "convertFromBSToAD"
 		},
-		"12": {
+		"2316": {
 			"sourceFileName": "utils/conversion.ts",
 			"qualifiedName": "convertFromBSToAD"
 		},
-		"13": {
+		"2317": {
 			"sourceFileName": "utils/conversion.ts",
-			"qualifiedName": "date"
+			"qualifiedName": "BS_date"
 		},
-		"14": {
+		"2318": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": ""
 		},
-		"15": {
+		"2319": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "yearInput"
 		},
-		"16": {
+		"2320": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "calcTotalDaysFromMinBS"
 		},
-		"17": {
+		"2321": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "calcTotalDaysFromMinBS"
 		},
-		"18": {
+		"2322": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "BS_date"
 		},
-		"19": {
+		"2323": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "calcTotalDaysInBSYear"
 		},
-		"20": {
+		"2324": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "calcTotalDaysInBSYear"
 		},
-		"21": {
+		"2325": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "year"
 		},
-		"22": {
+		"2326": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "extractYear"
 		},
-		"23": {
+		"2327": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "extractYear"
 		},
-		"24": {
+		"2328": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "input"
 		},
-		"25": {
+		"2329": {
 			"sourceFileName": "utils/index.ts",
 			"qualifiedName": ""
 		},
-		"26": {
+		"2330": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": ""
 		},
-		"27": {
+		"2331": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "isValidBSYear"
 		},
-		"28": {
+		"2332": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "isValidBSYear"
 		},
-		"29": {
+		"2333": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "yearInput"
 		},
-		"30": {
+		"2334": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "isValidADYear"
 		},
-		"31": {
+		"2335": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "isValidADYear"
 		},
-		"32": {
+		"2336": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "yearInput"
 		},
-		"33": {
+		"2337": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "isADLeapYear"
 		},
-		"34": {
+		"2338": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "isADLeapYear"
 		},
-		"35": {
+		"2339": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "yearInput"
 		}
@@ -1153,12 +1131,12 @@
 			"6": "utils/validators.ts"
 		},
 		"reflections": {
-			"1": 1,
-			"2": 2,
-			"3": 7,
-			"4": 14,
-			"5": 25,
-			"6": 26
+			"1": 2305,
+			"2": 2306,
+			"3": 2311,
+			"4": 2318,
+			"5": 2329,
+			"6": 2330
 		}
 	}
 }

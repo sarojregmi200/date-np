@@ -16,30 +16,33 @@ import { isValidBSYear } from "./validators.ts";
  * @returns {number} - The total days from the given BS date.
  */
 const calcTotalDaysFromMinBS = (BS_date: Date): number => {
-    let totalDays = BS_date.getDate() - 1;
+    let totalDays = BS_date.getDate();
 
     const isValid = isValidBSYear(BS_date);
-    const currentYear = BS_date.getFullYear();
+    const currentBSYear = BS_date.getFullYear();
 
     if (!isValid)
         throw Errors.INVALID_BS_YEAR;
 
     // adding this months days
     // Month also starts from 0 so we are checking till <=
-    for (let i = 0; i <= BS_date.getMonth(); i++) {
-        totalDays += BS_MONTHS[currentYear as BS_MONTHS_KEYS][i]
+    for (let i = 0; i < BS_date.getMonth(); i++) {
+        totalDays += BS_MONTHS[currentBSYear as BS_MONTHS_KEYS][i]
     }
 
-    const yearsDiff = currentYear - Number(MIN_BS_YEAR);
-    if (yearsDiff <= 0)
+    if (currentBSYear === Number(MIN_BS_YEAR))
         return totalDays;
 
     // calculating each year's days
-    for (let i = MIN_BS_YEAR; i < currentYear; i++) {
+    for (let i = MIN_BS_YEAR; i < currentBSYear; i++) {
         totalDays += calcTotalDaysInBSYear(i);
     }
 
-    return totalDays;
+    // This is a temporary fix to account for the fact
+    // that 1944 1 1 starts at nepali date 2000 09 17 hence
+    // the day till poush and 16 are added and subtracted from the total days
+    // TODO: Fix this properly
+    return totalDays - (275 + 16);
 }
 
 /**
@@ -61,6 +64,10 @@ const calcTotalDaysInBSYear = (year: yearInput): number => {
         totalDays += BS_MONTHS[year as BS_MONTHS_KEYS][i];
     }
 
+    console.log({
+        year,
+        totalDays
+    })
     return totalDays;
 }
 

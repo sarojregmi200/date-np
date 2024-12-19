@@ -1,4 +1,4 @@
-import { expect, test } from "vitest";
+import { assert, expect, test } from "vitest";
 import { convertFromADToBS, convertFromBSToAD } from "../utils/conversion";
 
 const BSToADCASES = [
@@ -53,9 +53,8 @@ const BSToADCASES = [
 ]
 
 for (const { inputDate, outputDate } of BSToADCASES) {
-    test(`BS to AD ${inputDate} ${outputDate}`, () => {
+    test(`AD to BS ${inputDate.toLocaleString().split(',')[0]}`, () => {
         const output = convertFromBSToAD(inputDate);
         expect(output).toEqual(outputDate);
     });
 }
-
