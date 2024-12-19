@@ -29,7 +29,6 @@
     "dist"
   ],
   "scripts": {
-    "dev": "bun build",
     "watch:auto-gen-docs": "typedoc --watch",
     "preview:docs": "cd docs && bun run start",
     "dev": "concurrently \"bun run watch:auto-gen-docs\" \"bun run preview:docs\" -c \"green,blue\" -n \"gen-docs,preview\" ",
