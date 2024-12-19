@@ -5,7 +5,7 @@
 
 import { MIN_AD_YEAR } from "../data/constants";
 import Errors from "./Errors";
-import { calcTotalDaysFromMinBS } from "./helpers";
+import { addDaysToMinBSDate, calcTotalDaysFromMinAD, calcTotalDaysFromMinBS } from "./helpers";
 import { isValidADRange, isValidBSRange } from "./validators";
 
 const convertFromADToBS = (date: Date) => {
@@ -13,7 +13,13 @@ const convertFromADToBS = (date: Date) => {
     if (!isValid)
         throw Errors.INVALID_AD_DATE_RANGE;
 
-    return date
+    const differenceDays = calcTotalDaysFromMinAD(date);
+    console.log({
+        differenceDays
+    })
+    const BS_date = addDaysToMinBSDate(differenceDays)
+
+    return BS_date
 };
 
 const convertFromBSToAD = (BS_date: Date): Date => {
@@ -22,7 +28,9 @@ const convertFromBSToAD = (BS_date: Date): Date => {
         throw Errors.INVALID_BS_DATE_RANGE;
 
     const differenceDays = calcTotalDaysFromMinBS(BS_date);
-    console.log(differenceDays)
+    console.log({
+        differenceDaysBS: differenceDays
+    })
     const AD_date = new Date(MIN_AD_YEAR, 1, differenceDays);
 
     return AD_date;
