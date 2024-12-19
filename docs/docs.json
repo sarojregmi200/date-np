@@ -1,12 +1,12 @@
 {
-	"id": 2304,
+	"id": 2376,
 	"name": "date-np",
 	"variant": "project",
 	"kind": 1,
 	"flags": {},
 	"children": [
 		{
-			"id": 2305,
+			"id": 2377,
 			"name": "date-np",
 			"variant": "declaration",
 			"kind": 2,
@@ -35,7 +35,7 @@
 			]
 		},
 		{
-			"id": 2329,
+			"id": 2401,
 			"name": "utils",
 			"variant": "declaration",
 			"kind": 2,
@@ -50,14 +50,14 @@
 			]
 		},
 		{
-			"id": 2311,
+			"id": 2383,
 			"name": "utils/conversion",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
 			"children": [
 				{
-					"id": 2312,
+					"id": 2384,
 					"name": "convertFromADToBS",
 					"variant": "declaration",
 					"kind": 64,
@@ -72,7 +72,7 @@
 					],
 					"signatures": [
 						{
-							"id": 2313,
+							"id": 2385,
 							"name": "convertFromADToBS",
 							"variant": "signature",
 							"kind": 4096,
@@ -87,7 +87,7 @@
 							],
 							"parameters": [
 								{
-									"id": 2314,
+									"id": 2386,
 									"name": "date",
 									"variant": "param",
 									"kind": 32768,
@@ -116,7 +116,7 @@
 					]
 				},
 				{
-					"id": 2315,
+					"id": 2387,
 					"name": "convertFromBSToAD",
 					"variant": "declaration",
 					"kind": 64,
@@ -131,7 +131,7 @@
 					],
 					"signatures": [
 						{
-							"id": 2316,
+							"id": 2388,
 							"name": "convertFromBSToAD",
 							"variant": "signature",
 							"kind": 4096,
@@ -146,7 +146,7 @@
 							],
 							"parameters": [
 								{
-									"id": 2317,
+									"id": 2389,
 									"name": "BS_date",
 									"variant": "param",
 									"kind": 32768,
@@ -179,8 +179,8 @@
 				{
 					"title": "Functions",
 					"children": [
-						2312,
-						2315
+						2384,
+						2387
 					]
 				}
 			],
@@ -194,14 +194,14 @@
 			]
 		},
 		{
-			"id": 2306,
+			"id": 2378,
 			"name": "utils/Errors",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
 			"children": [
 				{
-					"id": 2307,
+					"id": 2379,
 					"name": "default",
 					"variant": "declaration",
 					"kind": 32,
@@ -218,14 +218,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 2308,
+							"id": 2380,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 2310,
+									"id": 2382,
 									"name": "INVALID_AD_YEAR",
 									"variant": "declaration",
 									"kind": 1024,
@@ -249,7 +249,7 @@
 									"defaultValue": "..."
 								},
 								{
-									"id": 2309,
+									"id": 2381,
 									"name": "INVALID_BS_YEAR",
 									"variant": "declaration",
 									"kind": 1024,
@@ -277,8 +277,8 @@
 								{
 									"title": "Properties",
 									"children": [
-										2310,
-										2309
+										2382,
+										2381
 									]
 								}
 							],
@@ -298,7 +298,7 @@
 				{
 					"title": "Variables",
 					"children": [
-						2307
+						2379
 					]
 				}
 			],
@@ -311,14 +311,14 @@
 			]
 		},
 		{
-			"id": 2318,
+			"id": 2390,
 			"name": "utils/helpers",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
 			"children": [
 				{
-					"id": 2319,
+					"id": 2391,
 					"name": "yearInput",
 					"variant": "declaration",
 					"kind": 2097152,
@@ -359,7 +359,7 @@
 					}
 				},
 				{
-					"id": 2320,
+					"id": 2392,
 					"name": "calcTotalDaysFromMinBS",
 					"variant": "declaration",
 					"kind": 64,
@@ -387,7 +387,7 @@
 					],
 					"signatures": [
 						{
-							"id": 2321,
+							"id": 2393,
 							"name": "calcTotalDaysFromMinBS",
 							"variant": "signature",
 							"kind": 4096,
@@ -424,7 +424,7 @@
 							],
 							"parameters": [
 								{
-									"id": 2322,
+									"id": 2394,
 									"name": "BS_date",
 									"variant": "param",
 									"kind": 32768,
@@ -456,7 +456,7 @@
 					]
 				},
 				{
-					"id": 2323,
+					"id": 2395,
 					"name": "calcTotalDaysInBSYear",
 					"variant": "declaration",
 					"kind": 64,
@@ -484,7 +484,7 @@
 					],
 					"signatures": [
 						{
-							"id": 2324,
+							"id": 2396,
 							"name": "calcTotalDaysInBSYear",
 							"variant": "signature",
 							"kind": 4096,
@@ -521,7 +521,7 @@
 							],
 							"parameters": [
 								{
-									"id": 2325,
+									"id": 2397,
 									"name": "year",
 									"variant": "param",
 									"kind": 32768,
@@ -536,7 +536,7 @@
 									},
 									"type": {
 										"type": "reference",
-										"target": 2319,
+										"target": 2391,
 										"name": "yearInput",
 										"package": "date-np"
 									}
@@ -550,7 +550,7 @@
 					]
 				},
 				{
-					"id": 2326,
+					"id": 2398,
 					"name": "extractYear",
 					"variant": "declaration",
 					"kind": 64,
@@ -578,7 +578,7 @@
 					],
 					"signatures": [
 						{
-							"id": 2327,
+							"id": 2399,
 							"name": "extractYear",
 							"variant": "signature",
 							"kind": 4096,
@@ -615,7 +615,7 @@
 							],
 							"parameters": [
 								{
-									"id": 2328,
+									"id": 2400,
 									"name": "input",
 									"variant": "param",
 									"kind": 32768,
@@ -660,15 +660,15 @@
 				{
 					"title": "Type Aliases",
 					"children": [
-						2319
+						2391
 					]
 				},
 				{
 					"title": "Functions",
 					"children": [
-						2320,
-						2323,
-						2326
+						2392,
+						2395,
+						2398
 					]
 				}
 			],
@@ -676,25 +676,25 @@
 				{
 					"title": "Other",
 					"children": [
-						2319
+						2391
 					]
 				},
 				{
 					"title": "helpers\nCalculates the total number of days from MIN_BS_YEAR to the given BS date.",
 					"children": [
-						2320
+						2392
 					]
 				},
 				{
 					"title": "helpers\nCalculates the total number of days in the given BS year.",
 					"children": [
-						2323
+						2395
 					]
 				},
 				{
 					"title": "helpers\nExtracts the year from the given input.",
 					"children": [
-						2326
+						2398
 					]
 				}
 			],
@@ -707,14 +707,14 @@
 			]
 		},
 		{
-			"id": 2330,
+			"id": 2402,
 			"name": "utils/validators",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
 			"children": [
 				{
-					"id": 2337,
+					"id": 2409,
 					"name": "isADLeapYear",
 					"variant": "declaration",
 					"kind": 64,
@@ -729,7 +729,7 @@
 					],
 					"signatures": [
 						{
-							"id": 2338,
+							"id": 2410,
 							"name": "isADLeapYear",
 							"variant": "signature",
 							"kind": 4096,
@@ -744,14 +744,14 @@
 							],
 							"parameters": [
 								{
-									"id": 2339,
+									"id": 2411,
 									"name": "yearInput",
 									"variant": "param",
 									"kind": 32768,
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"target": 2319,
+										"target": 2391,
 										"name": "yearInput",
 										"package": "date-np"
 									}
@@ -765,7 +765,7 @@
 					]
 				},
 				{
-					"id": 2334,
+					"id": 2406,
 					"name": "isValidADYear",
 					"variant": "declaration",
 					"kind": 64,
@@ -780,7 +780,7 @@
 					],
 					"signatures": [
 						{
-							"id": 2335,
+							"id": 2407,
 							"name": "isValidADYear",
 							"variant": "signature",
 							"kind": 4096,
@@ -795,14 +795,14 @@
 							],
 							"parameters": [
 								{
-									"id": 2336,
+									"id": 2408,
 									"name": "yearInput",
 									"variant": "param",
 									"kind": 32768,
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"target": 2319,
+										"target": 2391,
 										"name": "yearInput",
 										"package": "date-np"
 									}
@@ -816,7 +816,7 @@
 					]
 				},
 				{
-					"id": 2331,
+					"id": 2403,
 					"name": "isValidBSYear",
 					"variant": "declaration",
 					"kind": 64,
@@ -845,7 +845,7 @@
 					],
 					"signatures": [
 						{
-							"id": 2332,
+							"id": 2404,
 							"name": "isValidBSYear",
 							"variant": "signature",
 							"kind": 4096,
@@ -883,7 +883,7 @@
 							],
 							"parameters": [
 								{
-									"id": 2333,
+									"id": 2405,
 									"name": "yearInput",
 									"variant": "param",
 									"kind": 32768,
@@ -898,7 +898,7 @@
 									},
 									"type": {
 										"type": "reference",
-										"target": 2319,
+										"target": 2391,
 										"name": "yearInput",
 										"package": "date-np"
 									}
@@ -916,9 +916,9 @@
 				{
 					"title": "Functions",
 					"children": [
-						2337,
-						2334,
-						2331
+						2409,
+						2406,
+						2403
 					]
 				}
 			],
@@ -926,14 +926,14 @@
 				{
 					"title": "Other",
 					"children": [
-						2337,
-						2334
+						2409,
+						2406
 					]
 				},
 				{
 					"title": "validators\nChecks if the given date is a valid BS date.",
 					"children": [
-						2331
+						2403
 					]
 				}
 			],
@@ -951,12 +951,12 @@
 		{
 			"title": "Modules",
 			"children": [
-				2305,
-				2329,
-				2311,
-				2306,
-				2318,
-				2330
+				2377,
+				2401,
+				2383,
+				2378,
+				2390,
+				2402
 			]
 		}
 	],
@@ -980,143 +980,143 @@
 		}
 	],
 	"symbolIdMap": {
-		"2305": {
+		"2377": {
 			"sourceFileName": "src/index.ts",
 			"qualifiedName": ""
 		},
-		"2306": {
+		"2378": {
 			"sourceFileName": "utils/Errors.ts",
 			"qualifiedName": ""
 		},
-		"2307": {
+		"2379": {
 			"sourceFileName": "utils/Errors.ts",
 			"qualifiedName": "Errors"
 		},
-		"2308": {
+		"2380": {
 			"sourceFileName": "utils/Errors.ts",
 			"qualifiedName": "__object"
 		},
-		"2309": {
+		"2381": {
 			"sourceFileName": "utils/Errors.ts",
 			"qualifiedName": "__object.INVALID_BS_YEAR"
 		},
-		"2310": {
+		"2382": {
 			"sourceFileName": "utils/Errors.ts",
 			"qualifiedName": "__object.INVALID_AD_YEAR"
 		},
-		"2311": {
+		"2383": {
 			"sourceFileName": "utils/conversion.ts",
 			"qualifiedName": ""
 		},
-		"2312": {
+		"2384": {
 			"sourceFileName": "utils/conversion.ts",
 			"qualifiedName": "convertFromADToBS"
 		},
-		"2313": {
+		"2385": {
 			"sourceFileName": "utils/conversion.ts",
 			"qualifiedName": "convertFromADToBS"
 		},
-		"2314": {
+		"2386": {
 			"sourceFileName": "utils/conversion.ts",
 			"qualifiedName": "date"
 		},
-		"2315": {
+		"2387": {
 			"sourceFileName": "utils/conversion.ts",
 			"qualifiedName": "convertFromBSToAD"
 		},
-		"2316": {
+		"2388": {
 			"sourceFileName": "utils/conversion.ts",
 			"qualifiedName": "convertFromBSToAD"
 		},
-		"2317": {
+		"2389": {
 			"sourceFileName": "utils/conversion.ts",
 			"qualifiedName": "BS_date"
 		},
-		"2318": {
+		"2390": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": ""
 		},
-		"2319": {
+		"2391": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "yearInput"
 		},
-		"2320": {
+		"2392": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "calcTotalDaysFromMinBS"
 		},
-		"2321": {
+		"2393": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "calcTotalDaysFromMinBS"
 		},
-		"2322": {
+		"2394": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "BS_date"
 		},
-		"2323": {
+		"2395": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "calcTotalDaysInBSYear"
 		},
-		"2324": {
+		"2396": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "calcTotalDaysInBSYear"
 		},
-		"2325": {
+		"2397": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "year"
 		},
-		"2326": {
+		"2398": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "extractYear"
 		},
-		"2327": {
+		"2399": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "extractYear"
 		},
-		"2328": {
+		"2400": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "input"
 		},
-		"2329": {
+		"2401": {
 			"sourceFileName": "utils/index.ts",
 			"qualifiedName": ""
 		},
-		"2330": {
+		"2402": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": ""
 		},
-		"2331": {
+		"2403": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "isValidBSYear"
 		},
-		"2332": {
+		"2404": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "isValidBSYear"
 		},
-		"2333": {
+		"2405": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "yearInput"
 		},
-		"2334": {
+		"2406": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "isValidADYear"
 		},
-		"2335": {
+		"2407": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "isValidADYear"
 		},
-		"2336": {
+		"2408": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "yearInput"
 		},
-		"2337": {
+		"2409": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "isADLeapYear"
 		},
-		"2338": {
+		"2410": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "isADLeapYear"
 		},
-		"2339": {
+		"2411": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "yearInput"
 		}
@@ -1131,12 +1131,12 @@
 			"6": "utils/validators.ts"
 		},
 		"reflections": {
-			"1": 2305,
-			"2": 2306,
-			"3": 2311,
-			"4": 2318,
-			"5": 2329,
-			"6": 2330
+			"1": 2377,
+			"2": 2378,
+			"3": 2383,
+			"4": 2390,
+			"5": 2401,
+			"6": 2402
 		}
 	}
 }

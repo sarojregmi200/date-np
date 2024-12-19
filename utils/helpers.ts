@@ -71,6 +71,50 @@ const calcTotalDaysInBSYear = (year: yearInput): number => {
     return totalDays;
 }
 
+const calcTotalDaysInADYear = (year: yearInput): number => {
+    let totalDays = 0;
+
+    let yearToCheck = extractYear(year);
+    const isValid = isValidADYear(yearToCheck);
+    if (!isValid)
+        throw Errors.INVALID_AD_YEAR;
+
+    // calculating each year's days
+    for (let i = 0; i < 12; i++) {
+        totalDays += AD_MONTH[i];
+    }
+
+    return totalDays;
+}
+
+const totalDaysFromMinAD = (AD_date: Date): number => {
+    let totalDays = AD_date.getDate();
+
+    const isValid = isValidADYear(AD_date);
+    const currentADYear = AD_date.getFullYear();
+
+    if (!isValid)
+        throw Errors.INVALID_AD_YEAR;
+
+    // adding this months days
+    // Month also starts from 0 so we are checking till <=
+    for (let i = 0; i < AD_date.getMonth(); i++) {
+        totalDays += AD_MONTH[i]
+    }
+
+    if (currentADYear === Number(MIN_AD_YEAR))
+        return totalDays;
+
+    // calculating each year's days
+    for (let i = MIN_AD_YEAR; i < currentADYear; i++) {
+        totalDays += calcTotalDaysInADYear(i);
+    }
+
+    return totalDays;
+}
+
+
+
 export type yearInput = Date | BS_MONTHS_KEYS | number;
 
 /**

@@ -4,32 +4,22 @@
  */
 
 import { MIN_AD_YEAR } from "../data/constants";
+import Errors from "./Errors";
 import { calcTotalDaysFromMinBS } from "./helpers";
+import { isValidADRange, isValidBSRange } from "./validators";
 
 const convertFromADToBS = (date: Date) => {
-    const AD_year = date.getFullYear();
-    const AD_month = date.getMonth();
-    const AD_day = date.getDate();
-
-    // TODO: Checking if the date is valid.
-    const isValid = true;
+    const isValid = isValidADRange(date);
     if (!isValid)
-        // TODO: create a custom error type.
-        throw new Error("Invalid date");
+        throw Errors.INVALID_AD_DATE_RANGE;
 
-    // since there is 57 years gap between AD and BS
-    const BS_year = AD_year + 57;
     return date
 };
 
 const convertFromBSToAD = (BS_date: Date): Date => {
-    const BS_year = BS_date.getFullYear();
-    const BS_month = BS_date.getMonth();
-    const BS_day = BS_date.getDate();
-
-    const isValid = true;
+    const isValid = isValidBSRange(BS_date);
     if (!isValid)
-        throw new Error("Invalid date");
+        throw Errors.INVALID_BS_DATE_RANGE;
 
     const differenceDays = calcTotalDaysFromMinBS(BS_date);
     console.log(differenceDays)

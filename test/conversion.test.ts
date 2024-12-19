@@ -57,4 +57,10 @@ for (const { inputDate, outputDate } of BSToADCASES) {
         const output = convertFromBSToAD(inputDate);
         expect(output).toEqual(outputDate);
     });
+
+    test(`BS to AD ${outputDate.toLocaleString().split(',')[0]}`, () => {
+        const output = convertFromADToBS(outputDate);
+        expect(output).toEqual(inputDate);
+    });
 }
+
