@@ -1,0 +1,1164 @@
+{
+	"id": 0,
+	"name": "date-np",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 1,
+			"name": "date-np",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"comment": {
+				"summary": [],
+				"blockTags": [
+					{
+						"tag": "@description",
+						"content": [
+							{
+								"kind": "text",
+								"text": "This module provides functions to Dates"
+							}
+						]
+					}
+				]
+			},
+			"sources": [
+				{
+					"fileName": "src/index.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/src/index.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 25,
+			"name": "utils",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "utils/index.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/index.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 7,
+			"name": "utils/conversion",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 8,
+					"name": "convertFromADToBS",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "converts the given date from AD to BS"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "utils/conversion.ts",
+							"line": 6,
+							"character": 6,
+							"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/conversion.ts#L6"
+						}
+					],
+					"signatures": [
+						{
+							"id": 9,
+							"name": "convertFromADToBS",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "converts the given date from AD to BS"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": []
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "utils/conversion.ts",
+									"line": 6,
+									"character": 26,
+									"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/conversion.ts#L6"
+								}
+							],
+							"parameters": [
+								{
+									"id": 10,
+									"name": "date",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Date"
+										},
+										"name": "Date",
+										"package": "typescript"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "node_modules/typescript/lib/lib.es5.d.ts",
+									"qualifiedName": "Date"
+								},
+								"name": "Date",
+								"package": "typescript"
+							}
+						}
+					]
+				},
+				{
+					"id": 11,
+					"name": "convertFromBSToAD",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "utils/conversion.ts",
+							"line": 22,
+							"character": 6,
+							"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/conversion.ts#L22"
+						}
+					],
+					"signatures": [
+						{
+							"id": 12,
+							"name": "convertFromBSToAD",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "utils/conversion.ts",
+									"line": 22,
+									"character": 26,
+									"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/conversion.ts#L22"
+								}
+							],
+							"parameters": [
+								{
+									"id": 13,
+									"name": "date",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Date"
+										},
+										"name": "Date",
+										"package": "typescript"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "node_modules/typescript/lib/lib.es5.d.ts",
+									"qualifiedName": "Date"
+								},
+								"name": "Date",
+								"package": "typescript"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						8,
+						11
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "utils/conversion.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/conversion.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 2,
+			"name": "utils/Errors",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 3,
+					"name": "default",
+					"variant": "declaration",
+					"kind": 32,
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "utils/Errors.ts",
+							"line": 3,
+							"character": 6
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 4,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 6,
+									"name": "INVALID_AD_YEAR",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "utils/Errors.ts",
+											"line": 5,
+											"character": 4
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "RangeError"
+										},
+										"name": "RangeError",
+										"package": "typescript"
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 5,
+									"name": "INVALID_BS_YEAR",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "utils/Errors.ts",
+											"line": 4,
+											"character": 4
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "RangeError"
+										},
+										"name": "RangeError",
+										"package": "typescript"
+									},
+									"defaultValue": "..."
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										6,
+										5
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "utils/Errors.ts",
+									"line": 3,
+									"character": 15
+								}
+							]
+						}
+					},
+					"defaultValue": "..."
+				}
+			],
+			"groups": [
+				{
+					"title": "Variables",
+					"children": [
+						3
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "utils/Errors.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 14,
+			"name": "utils/helpers",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 15,
+					"name": "yearInput",
+					"variant": "declaration",
+					"kind": 2097152,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "utils/helpers.ts",
+							"line": 67,
+							"character": 12
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "reference",
+								"target": {
+									"sourceFileName": "node_modules/typescript/lib/lib.es5.d.ts",
+									"qualifiedName": "Date"
+								},
+								"name": "Date",
+								"package": "typescript"
+							},
+							{
+								"type": "reference",
+								"target": {
+									"sourceFileName": "data/constants.ts",
+									"qualifiedName": "BS_MONTHS_KEYS"
+								},
+								"name": "BS_MONTHS_KEYS",
+								"package": "date-np"
+							},
+							{
+								"type": "intrinsic",
+								"name": "number"
+							}
+						]
+					}
+				},
+				{
+					"id": 16,
+					"name": "calcTotalDaysFromMinBS",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"comment": {
+						"summary": [],
+						"blockTags": [
+							{
+								"tag": "@category",
+								"content": [
+									{
+										"kind": "text",
+										"text": "helpers\nCalculates the total number of days from MIN_BS_YEAR to the given BS date."
+									}
+								]
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "utils/helpers.ts",
+							"line": 18,
+							"character": 6
+						}
+					],
+					"signatures": [
+						{
+							"id": 17,
+							"name": "calcTotalDaysFromMinBS",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [],
+								"blockTags": [
+									{
+										"tag": "@category",
+										"content": [
+											{
+												"kind": "text",
+												"text": "helpers\nCalculates the total number of days from MIN_BS_YEAR to the given BS date."
+											}
+										]
+									},
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "- The total days from the given BS date."
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "utils/helpers.ts",
+									"line": 18,
+									"character": 31
+								}
+							],
+							"parameters": [
+								{
+									"id": 18,
+									"name": "BS_date",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The BS date to calculate the total days to."
+											}
+										]
+									},
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Date"
+										},
+										"name": "Date",
+										"package": "typescript"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					]
+				},
+				{
+					"id": 19,
+					"name": "calcTotalDaysInBSYear",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"comment": {
+						"summary": [],
+						"blockTags": [
+							{
+								"tag": "@category",
+								"content": [
+									{
+										"kind": "text",
+										"text": "helpers\nCalculates the total number of days in the given BS year."
+									}
+								]
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "utils/helpers.ts",
+							"line": 51,
+							"character": 6
+						}
+					],
+					"signatures": [
+						{
+							"id": 20,
+							"name": "calcTotalDaysInBSYear",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [],
+								"blockTags": [
+									{
+										"tag": "@category",
+										"content": [
+											{
+												"kind": "text",
+												"text": "helpers\nCalculates the total number of days in the given BS year."
+											}
+										]
+									},
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "- The total days in the given BS year."
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "utils/helpers.ts",
+									"line": 51,
+									"character": 30
+								}
+							],
+							"parameters": [
+								{
+									"id": 21,
+									"name": "year",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The BS year to calculate the total days in."
+											}
+										]
+									},
+									"type": {
+										"type": "reference",
+										"target": 15,
+										"name": "yearInput",
+										"package": "date-np"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					]
+				},
+				{
+					"id": 22,
+					"name": "extractYear",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"comment": {
+						"summary": [],
+						"blockTags": [
+							{
+								"tag": "@category",
+								"content": [
+									{
+										"kind": "text",
+										"text": "helpers\nExtracts the year from the given input."
+									}
+								]
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "utils/helpers.ts",
+							"line": 75,
+							"character": 6
+						}
+					],
+					"signatures": [
+						{
+							"id": 23,
+							"name": "extractYear",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [],
+								"blockTags": [
+									{
+										"tag": "@category",
+										"content": [
+											{
+												"kind": "text",
+												"text": "helpers\nExtracts the year from the given input."
+											}
+										]
+									},
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "- The extracted year."
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "utils/helpers.ts",
+									"line": 75,
+									"character": 20
+								}
+							],
+							"parameters": [
+								{
+									"id": 24,
+									"name": "input",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The input to extract the year from."
+											}
+										]
+									},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "number"
+											},
+											{
+												"type": "reference",
+												"target": {
+													"sourceFileName": "node_modules/typescript/lib/lib.es5.d.ts",
+													"qualifiedName": "Date"
+												},
+												"name": "Date",
+												"package": "typescript"
+											}
+										]
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Type Aliases",
+					"children": [
+						15
+					]
+				},
+				{
+					"title": "Functions",
+					"children": [
+						16,
+						19,
+						22
+					]
+				}
+			],
+			"categories": [
+				{
+					"title": "Other",
+					"children": [
+						15
+					]
+				},
+				{
+					"title": "helpers\nCalculates the total number of days from MIN_BS_YEAR to the given BS date.",
+					"children": [
+						16
+					]
+				},
+				{
+					"title": "helpers\nCalculates the total number of days in the given BS year.",
+					"children": [
+						19
+					]
+				},
+				{
+					"title": "helpers\nExtracts the year from the given input.",
+					"children": [
+						22
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "utils/helpers.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 26,
+			"name": "utils/validators",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 33,
+					"name": "isADLeapYear",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "utils/validators.ts",
+							"line": 28,
+							"character": 6,
+							"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/validators.ts#L28"
+						}
+					],
+					"signatures": [
+						{
+							"id": 34,
+							"name": "isADLeapYear",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "utils/validators.ts",
+									"line": 28,
+									"character": 21,
+									"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/validators.ts#L28"
+								}
+							],
+							"parameters": [
+								{
+									"id": 35,
+									"name": "yearInput",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": 15,
+										"name": "yearInput",
+										"package": "date-np"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					]
+				},
+				{
+					"id": 30,
+					"name": "isValidADYear",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "utils/validators.ts",
+							"line": 23,
+							"character": 6,
+							"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/validators.ts#L23"
+						}
+					],
+					"signatures": [
+						{
+							"id": 31,
+							"name": "isValidADYear",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "utils/validators.ts",
+									"line": 23,
+									"character": 22,
+									"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/validators.ts#L23"
+								}
+							],
+							"parameters": [
+								{
+									"id": 32,
+									"name": "yearInput",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": 15,
+										"name": "yearInput",
+										"package": "date-np"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					]
+				},
+				{
+					"id": 27,
+					"name": "isValidBSYear",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"comment": {
+						"summary": [],
+						"blockTags": [
+							{
+								"tag": "@category",
+								"content": [
+									{
+										"kind": "text",
+										"text": "validators\nChecks if the given date is a valid BS date."
+									}
+								]
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "utils/validators.ts",
+							"line": 18,
+							"character": 6,
+							"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/validators.ts#L18"
+						}
+					],
+					"signatures": [
+						{
+							"id": 28,
+							"name": "isValidBSYear",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [],
+								"blockTags": [
+									{
+										"tag": "@category",
+										"content": [
+											{
+												"kind": "text",
+												"text": "validators\nChecks if the given date is a valid BS date."
+											}
+										]
+									},
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "- True if the date is a valid BS date, false otherwise."
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "utils/validators.ts",
+									"line": 18,
+									"character": 22,
+									"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/validators.ts#L18"
+								}
+							],
+							"parameters": [
+								{
+									"id": 29,
+									"name": "yearInput",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The date to be checked."
+											}
+										]
+									},
+									"type": {
+										"type": "reference",
+										"target": 15,
+										"name": "yearInput",
+										"package": "date-np"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						33,
+						30,
+						27
+					]
+				}
+			],
+			"categories": [
+				{
+					"title": "Other",
+					"children": [
+						33,
+						30
+					]
+				},
+				{
+					"title": "validators\nChecks if the given date is a valid BS date.",
+					"children": [
+						27
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "utils/validators.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/validators.ts#L1"
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Modules",
+			"children": [
+				1,
+				25,
+				7,
+				2,
+				14,
+				26
+			]
+		}
+	],
+	"packageName": "date-np",
+	"readme": [
+		{
+			"kind": "text",
+			"text": "# date-np\nSimple & minimal Nepali date picker that just works.\n\n> ## Back story:\n> Why create this package?\n> Because I was looking for a simple & minimal Nepali date picker that just works.\n> Found some but either they were bit qworky had bugs or they were not maintained.\n> So I decided to create my own. \n> During my work at [Bright Software] (https://brightit.com.np)\n\n## Installation\n### bun:\n"
+		},
+		{
+			"kind": "code",
+			"text": "```bash\nbunx jsr add @saroj/date-np\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### npm:\n"
+		},
+		{
+			"kind": "code",
+			"text": "```bash\nnpx jsr install @saroj/date-np\n```"
+		}
+	],
+	"symbolIdMap": {
+		"1": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": ""
+		},
+		"2": {
+			"sourceFileName": "utils/Errors.ts",
+			"qualifiedName": ""
+		},
+		"3": {
+			"sourceFileName": "utils/Errors.ts",
+			"qualifiedName": "Errors"
+		},
+		"4": {
+			"sourceFileName": "utils/Errors.ts",
+			"qualifiedName": "__object"
+		},
+		"5": {
+			"sourceFileName": "utils/Errors.ts",
+			"qualifiedName": "__object.INVALID_BS_YEAR"
+		},
+		"6": {
+			"sourceFileName": "utils/Errors.ts",
+			"qualifiedName": "__object.INVALID_AD_YEAR"
+		},
+		"7": {
+			"sourceFileName": "utils/conversion.ts",
+			"qualifiedName": ""
+		},
+		"8": {
+			"sourceFileName": "utils/conversion.ts",
+			"qualifiedName": "convertFromADToBS"
+		},
+		"9": {
+			"sourceFileName": "utils/conversion.ts",
+			"qualifiedName": "convertFromADToBS"
+		},
+		"10": {
+			"sourceFileName": "utils/conversion.ts",
+			"qualifiedName": "date"
+		},
+		"11": {
+			"sourceFileName": "utils/conversion.ts",
+			"qualifiedName": "convertFromBSToAD"
+		},
+		"12": {
+			"sourceFileName": "utils/conversion.ts",
+			"qualifiedName": "convertFromBSToAD"
+		},
+		"13": {
+			"sourceFileName": "utils/conversion.ts",
+			"qualifiedName": "date"
+		},
+		"14": {
+			"sourceFileName": "utils/helpers.ts",
+			"qualifiedName": ""
+		},
+		"15": {
+			"sourceFileName": "utils/helpers.ts",
+			"qualifiedName": "yearInput"
+		},
+		"16": {
+			"sourceFileName": "utils/helpers.ts",
+			"qualifiedName": "calcTotalDaysFromMinBS"
+		},
+		"17": {
+			"sourceFileName": "utils/helpers.ts",
+			"qualifiedName": "calcTotalDaysFromMinBS"
+		},
+		"18": {
+			"sourceFileName": "utils/helpers.ts",
+			"qualifiedName": "BS_date"
+		},
+		"19": {
+			"sourceFileName": "utils/helpers.ts",
+			"qualifiedName": "calcTotalDaysInBSYear"
+		},
+		"20": {
+			"sourceFileName": "utils/helpers.ts",
+			"qualifiedName": "calcTotalDaysInBSYear"
+		},
+		"21": {
+			"sourceFileName": "utils/helpers.ts",
+			"qualifiedName": "year"
+		},
+		"22": {
+			"sourceFileName": "utils/helpers.ts",
+			"qualifiedName": "extractYear"
+		},
+		"23": {
+			"sourceFileName": "utils/helpers.ts",
+			"qualifiedName": "extractYear"
+		},
+		"24": {
+			"sourceFileName": "utils/helpers.ts",
+			"qualifiedName": "input"
+		},
+		"25": {
+			"sourceFileName": "utils/index.ts",
+			"qualifiedName": ""
+		},
+		"26": {
+			"sourceFileName": "utils/validators.ts",
+			"qualifiedName": ""
+		},
+		"27": {
+			"sourceFileName": "utils/validators.ts",
+			"qualifiedName": "isValidBSYear"
+		},
+		"28": {
+			"sourceFileName": "utils/validators.ts",
+			"qualifiedName": "isValidBSYear"
+		},
+		"29": {
+			"sourceFileName": "utils/validators.ts",
+			"qualifiedName": "yearInput"
+		},
+		"30": {
+			"sourceFileName": "utils/validators.ts",
+			"qualifiedName": "isValidADYear"
+		},
+		"31": {
+			"sourceFileName": "utils/validators.ts",
+			"qualifiedName": "isValidADYear"
+		},
+		"32": {
+			"sourceFileName": "utils/validators.ts",
+			"qualifiedName": "yearInput"
+		},
+		"33": {
+			"sourceFileName": "utils/validators.ts",
+			"qualifiedName": "isADLeapYear"
+		},
+		"34": {
+			"sourceFileName": "utils/validators.ts",
+			"qualifiedName": "isADLeapYear"
+		},
+		"35": {
+			"sourceFileName": "utils/validators.ts",
+			"qualifiedName": "yearInput"
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "src/index.ts",
+			"2": "utils/Errors.ts",
+			"3": "utils/conversion.ts",
+			"4": "utils/helpers.ts",
+			"5": "utils/index.ts",
+			"6": "utils/validators.ts"
+		},
+		"reflections": {
+			"1": 1,
+			"2": 2,
+			"3": 7,
+			"4": 14,
+			"5": 25,
+			"6": 26
+		}
+	}
+}

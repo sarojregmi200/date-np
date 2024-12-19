@@ -4,6 +4,8 @@
 # Production
 /build
 
+/docs/auto/
+
 # Generated files
 .docusaurus
 .cache-loader
