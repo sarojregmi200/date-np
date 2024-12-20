@@ -105,6 +105,7 @@ export type BS_MONTHS_KEYS = keyof typeof BS_MONTHS;
 
 export const AD_MONTH = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31] as const;
 export const AD_MONTH_LEAP_YEAR = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31] as const;
+
 export const MIN_BS_YEAR = Number(Object.keys(BS_MONTHS)[0]);
 export const MIN_AD_YEAR = 1944;
 export const MAX_BS_YEAR = Number(Object.keys(BS_MONTHS).pop());

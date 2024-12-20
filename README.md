@@ -30,6 +30,7 @@ This project is still in it's early stages it's a work in progress.
 - [x] Add tests.
 
 - [ ] Deciding on using date-fns or using custom functions.
+- [ ] Fixing the scripts naming convention and scripts.
 - [ ] Fixing the auto generated docs.
 - [ ] Creating a picker for react. 
 - [ ] Making the exports good and publishing to jsr.

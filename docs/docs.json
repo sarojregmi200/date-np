@@ -1,41 +1,27 @@
 {
-	"id": 3862,
+	"id": 900,
 	"name": "date-np",
 	"variant": "project",
 	"kind": 1,
 	"flags": {},
 	"children": [
 		{
-			"id": 3863,
-			"name": "date-np",
+			"id": 901,
+			"name": "src/hooks/useDate",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
-			"comment": {
-				"summary": [],
-				"blockTags": [
-					{
-						"tag": "@description",
-						"content": [
-							{
-								"kind": "text",
-								"text": "This module provides functions to Dates"
-							}
-						]
-					}
-				]
-			},
 			"sources": [
 				{
-					"fileName": "src/index.ts",
+					"fileName": "src/hooks/useDate.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/src/index.ts#L1"
+					"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/src/hooks/useDate.ts#L1"
 				}
 			]
 		},
 		{
-			"id": 3895,
+			"id": 933,
 			"name": "utils",
 			"variant": "declaration",
 			"kind": 2,
@@ -45,19 +31,19 @@
 					"fileName": "utils/index.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/index.ts#L1"
+					"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/index.ts#L1"
 				}
 			]
 		},
 		{
-			"id": 3871,
+			"id": 909,
 			"name": "utils/conversion",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
 			"children": [
 				{
-					"id": 3872,
+					"id": 910,
 					"name": "convertFromADToBS",
 					"variant": "declaration",
 					"kind": 64,
@@ -65,14 +51,14 @@
 					"sources": [
 						{
 							"fileName": "utils/conversion.ts",
-							"line": 11,
+							"line": 22,
 							"character": 6,
-							"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/conversion.ts#L11"
+							"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/conversion.ts#L22"
 						}
 					],
 					"signatures": [
 						{
-							"id": 3873,
+							"id": 911,
 							"name": "convertFromADToBS",
 							"variant": "signature",
 							"kind": 4096,
@@ -80,14 +66,14 @@
 							"sources": [
 								{
 									"fileName": "utils/conversion.ts",
-									"line": 11,
+									"line": 22,
 									"character": 26,
-									"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/conversion.ts#L11"
+									"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/conversion.ts#L22"
 								}
 							],
 							"parameters": [
 								{
-									"id": 3874,
+									"id": 912,
 									"name": "date",
 									"variant": "param",
 									"kind": 32768,
@@ -116,7 +102,7 @@
 					]
 				},
 				{
-					"id": 3875,
+					"id": 913,
 					"name": "convertFromBSToAD",
 					"variant": "declaration",
 					"kind": 64,
@@ -124,14 +110,14 @@
 					"sources": [
 						{
 							"fileName": "utils/conversion.ts",
-							"line": 25,
+							"line": 11,
 							"character": 6,
-							"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/conversion.ts#L25"
+							"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/conversion.ts#L11"
 						}
 					],
 					"signatures": [
 						{
-							"id": 3876,
+							"id": 914,
 							"name": "convertFromBSToAD",
 							"variant": "signature",
 							"kind": 4096,
@@ -139,14 +125,14 @@
 							"sources": [
 								{
 									"fileName": "utils/conversion.ts",
-									"line": 25,
+									"line": 11,
 									"character": 26,
-									"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/conversion.ts#L25"
+									"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/conversion.ts#L11"
 								}
 							],
 							"parameters": [
 								{
-									"id": 3877,
+									"id": 915,
 									"name": "BS_date",
 									"variant": "param",
 									"kind": 32768,
@@ -179,8 +165,8 @@
 				{
 					"title": "Functions",
 					"children": [
-						3872,
-						3875
+						910,
+						913
 					]
 				}
 			],
@@ -189,19 +175,19 @@
 					"fileName": "utils/conversion.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/conversion.ts#L1"
+					"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/conversion.ts#L1"
 				}
 			]
 		},
 		{
-			"id": 3864,
+			"id": 902,
 			"name": "utils/Errors",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
 			"children": [
 				{
-					"id": 3865,
+					"id": 903,
 					"name": "default",
 					"variant": "declaration",
 					"kind": 32,
@@ -212,20 +198,21 @@
 						{
 							"fileName": "utils/Errors.ts",
 							"line": 3,
-							"character": 6
+							"character": 6,
+							"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/Errors.ts#L3"
 						}
 					],
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 3866,
+							"id": 904,
 							"name": "__type",
 							"variant": "declaration",
 							"kind": 65536,
 							"flags": {},
 							"children": [
 								{
-									"id": 3870,
+									"id": 908,
 									"name": "INVALID_AD_DATE_RANGE",
 									"variant": "declaration",
 									"kind": 1024,
@@ -234,7 +221,8 @@
 										{
 											"fileName": "utils/Errors.ts",
 											"line": 8,
-											"character": 4
+											"character": 4,
+											"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/Errors.ts#L8"
 										}
 									],
 									"type": {
@@ -249,7 +237,7 @@
 									"defaultValue": "..."
 								},
 								{
-									"id": 3868,
+									"id": 906,
 									"name": "INVALID_AD_YEAR",
 									"variant": "declaration",
 									"kind": 1024,
@@ -258,7 +246,8 @@
 										{
 											"fileName": "utils/Errors.ts",
 											"line": 5,
-											"character": 4
+											"character": 4,
+											"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/Errors.ts#L5"
 										}
 									],
 									"type": {
@@ -273,7 +262,7 @@
 									"defaultValue": "..."
 								},
 								{
-									"id": 3869,
+									"id": 907,
 									"name": "INVALID_BS_DATE_RANGE",
 									"variant": "declaration",
 									"kind": 1024,
@@ -282,7 +271,8 @@
 										{
 											"fileName": "utils/Errors.ts",
 											"line": 7,
-											"character": 4
+											"character": 4,
+											"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/Errors.ts#L7"
 										}
 									],
 									"type": {
@@ -297,7 +287,7 @@
 									"defaultValue": "..."
 								},
 								{
-									"id": 3867,
+									"id": 905,
 									"name": "INVALID_BS_YEAR",
 									"variant": "declaration",
 									"kind": 1024,
@@ -306,7 +296,8 @@
 										{
 											"fileName": "utils/Errors.ts",
 											"line": 4,
-											"character": 4
+											"character": 4,
+											"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/Errors.ts#L4"
 										}
 									],
 									"type": {
@@ -325,10 +316,10 @@
 								{
 									"title": "Properties",
 									"children": [
-										3870,
-										3868,
-										3869,
-										3867
+										908,
+										906,
+										907,
+										905
 									]
 								}
 							],
@@ -336,7 +327,8 @@
 								{
 									"fileName": "utils/Errors.ts",
 									"line": 3,
-									"character": 15
+									"character": 15,
+									"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/Errors.ts#L3"
 								}
 							]
 						}
@@ -348,7 +340,7 @@
 				{
 					"title": "Variables",
 					"children": [
-						3865
+						903
 					]
 				}
 			],
@@ -356,19 +348,20 @@
 				{
 					"fileName": "utils/Errors.ts",
 					"line": 1,
-					"character": 0
+					"character": 0,
+					"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/Errors.ts#L1"
 				}
 			]
 		},
 		{
-			"id": 3878,
+			"id": 916,
 			"name": "utils/helpers",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
 			"children": [
 				{
-					"id": 3879,
+					"id": 917,
 					"name": "yearInput",
 					"variant": "declaration",
 					"kind": 2097152,
@@ -376,8 +369,9 @@
 					"sources": [
 						{
 							"fileName": "utils/helpers.ts",
-							"line": 131,
-							"character": 12
+							"line": 133,
+							"character": 12,
+							"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/helpers.ts#L133"
 						}
 					],
 					"type": {
@@ -409,7 +403,7 @@
 					}
 				},
 				{
-					"id": 3889,
+					"id": 927,
 					"name": "addDaysToMinBSDate",
 					"variant": "declaration",
 					"kind": 64,
@@ -418,12 +412,13 @@
 						{
 							"fileName": "utils/helpers.ts",
 							"line": 70,
-							"character": 6
+							"character": 6,
+							"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/helpers.ts#L70"
 						}
 					],
 					"signatures": [
 						{
-							"id": 3890,
+							"id": 928,
 							"name": "addDaysToMinBSDate",
 							"variant": "signature",
 							"kind": 4096,
@@ -432,12 +427,13 @@
 								{
 									"fileName": "utils/helpers.ts",
 									"line": 70,
-									"character": 27
+									"character": 27,
+									"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/helpers.ts#L70"
 								}
 							],
 							"parameters": [
 								{
-									"id": 3891,
+									"id": 929,
 									"name": "days",
 									"variant": "param",
 									"kind": 32768,
@@ -461,7 +457,7 @@
 					]
 				},
 				{
-					"id": 3886,
+					"id": 924,
 					"name": "calcTotalDaysFromMinAD",
 					"variant": "declaration",
 					"kind": 64,
@@ -469,13 +465,14 @@
 					"sources": [
 						{
 							"fileName": "utils/helpers.ts",
-							"line": 93,
-							"character": 6
+							"line": 95,
+							"character": 6,
+							"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/helpers.ts#L95"
 						}
 					],
 					"signatures": [
 						{
-							"id": 3887,
+							"id": 925,
 							"name": "calcTotalDaysFromMinAD",
 							"variant": "signature",
 							"kind": 4096,
@@ -483,13 +480,14 @@
 							"sources": [
 								{
 									"fileName": "utils/helpers.ts",
-									"line": 93,
-									"character": 31
+									"line": 95,
+									"character": 31,
+									"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/helpers.ts#L95"
 								}
 							],
 							"parameters": [
 								{
-									"id": 3888,
+									"id": 926,
 									"name": "AD_date",
 									"variant": "param",
 									"kind": 32768,
@@ -513,7 +511,7 @@
 					]
 				},
 				{
-					"id": 3880,
+					"id": 918,
 					"name": "calcTotalDaysFromMinBS",
 					"variant": "declaration",
 					"kind": 64,
@@ -536,12 +534,13 @@
 						{
 							"fileName": "utils/helpers.ts",
 							"line": 18,
-							"character": 6
+							"character": 6,
+							"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/helpers.ts#L18"
 						}
 					],
 					"signatures": [
 						{
-							"id": 3881,
+							"id": 919,
 							"name": "calcTotalDaysFromMinBS",
 							"variant": "signature",
 							"kind": 4096,
@@ -573,12 +572,13 @@
 								{
 									"fileName": "utils/helpers.ts",
 									"line": 18,
-									"character": 31
+									"character": 31,
+									"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/helpers.ts#L18"
 								}
 							],
 							"parameters": [
 								{
-									"id": 3882,
+									"id": 920,
 									"name": "BS_date",
 									"variant": "param",
 									"kind": 32768,
@@ -610,7 +610,7 @@
 					]
 				},
 				{
-					"id": 3883,
+					"id": 921,
 					"name": "calcTotalDaysInBSYear",
 					"variant": "declaration",
 					"kind": 64,
@@ -633,12 +633,13 @@
 						{
 							"fileName": "utils/helpers.ts",
 							"line": 54,
-							"character": 6
+							"character": 6,
+							"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/helpers.ts#L54"
 						}
 					],
 					"signatures": [
 						{
-							"id": 3884,
+							"id": 922,
 							"name": "calcTotalDaysInBSYear",
 							"variant": "signature",
 							"kind": 4096,
@@ -670,12 +671,13 @@
 								{
 									"fileName": "utils/helpers.ts",
 									"line": 54,
-									"character": 30
+									"character": 30,
+									"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/helpers.ts#L54"
 								}
 							],
 							"parameters": [
 								{
-									"id": 3885,
+									"id": 923,
 									"name": "year",
 									"variant": "param",
 									"kind": 32768,
@@ -690,7 +692,7 @@
 									},
 									"type": {
 										"type": "reference",
-										"target": 3879,
+										"target": 917,
 										"name": "yearInput",
 										"package": "date-np"
 									}
@@ -704,7 +706,7 @@
 					]
 				},
 				{
-					"id": 3892,
+					"id": 930,
 					"name": "extractYear",
 					"variant": "declaration",
 					"kind": 64,
@@ -726,13 +728,14 @@
 					"sources": [
 						{
 							"fileName": "utils/helpers.ts",
-							"line": 139,
-							"character": 6
+							"line": 141,
+							"character": 6,
+							"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/helpers.ts#L141"
 						}
 					],
 					"signatures": [
 						{
-							"id": 3893,
+							"id": 931,
 							"name": "extractYear",
 							"variant": "signature",
 							"kind": 4096,
@@ -763,13 +766,14 @@
 							"sources": [
 								{
 									"fileName": "utils/helpers.ts",
-									"line": 139,
-									"character": 20
+									"line": 141,
+									"character": 20,
+									"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/helpers.ts#L141"
 								}
 							],
 							"parameters": [
 								{
-									"id": 3894,
+									"id": 932,
 									"name": "input",
 									"variant": "param",
 									"kind": 32768,
@@ -814,17 +818,17 @@
 				{
 					"title": "Type Aliases",
 					"children": [
-						3879
+						917
 					]
 				},
 				{
 					"title": "Functions",
 					"children": [
-						3889,
-						3886,
-						3880,
-						3883,
-						3892
+						927,
+						924,
+						918,
+						921,
+						930
 					]
 				}
 			],
@@ -832,27 +836,27 @@
 				{
 					"title": "Other",
 					"children": [
-						3879,
-						3889,
-						3886
+						917,
+						927,
+						924
 					]
 				},
 				{
 					"title": "helpers\nCalculates the total number of days from MIN_BS_YEAR to the given BS date.",
 					"children": [
-						3880
+						918
 					]
 				},
 				{
 					"title": "helpers\nCalculates the total number of days in the given BS year.",
 					"children": [
-						3883
+						921
 					]
 				},
 				{
 					"title": "helpers\nExtracts the year from the given input.",
 					"children": [
-						3892
+						930
 					]
 				}
 			],
@@ -860,19 +864,20 @@
 				{
 					"fileName": "utils/helpers.ts",
 					"line": 1,
-					"character": 0
+					"character": 0,
+					"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/helpers.ts#L1"
 				}
 			]
 		},
 		{
-			"id": 3896,
+			"id": 934,
 			"name": "utils/validators",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
 			"children": [
 				{
-					"id": 3903,
+					"id": 941,
 					"name": "isADLeapYear",
 					"variant": "declaration",
 					"kind": 64,
@@ -882,12 +887,12 @@
 							"fileName": "utils/validators.ts",
 							"line": 28,
 							"character": 6,
-							"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/validators.ts#L28"
+							"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/validators.ts#L28"
 						}
 					],
 					"signatures": [
 						{
-							"id": 3904,
+							"id": 942,
 							"name": "isADLeapYear",
 							"variant": "signature",
 							"kind": 4096,
@@ -897,19 +902,19 @@
 									"fileName": "utils/validators.ts",
 									"line": 28,
 									"character": 21,
-									"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/validators.ts#L28"
+									"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/validators.ts#L28"
 								}
 							],
 							"parameters": [
 								{
-									"id": 3905,
+									"id": 943,
 									"name": "yearInput",
 									"variant": "param",
 									"kind": 32768,
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"target": 3879,
+										"target": 917,
 										"name": "yearInput",
 										"package": "date-np"
 									}
@@ -923,7 +928,7 @@
 					]
 				},
 				{
-					"id": 3906,
+					"id": 944,
 					"name": "isValidADRange",
 					"variant": "declaration",
 					"kind": 64,
@@ -947,12 +952,12 @@
 							"fileName": "utils/validators.ts",
 							"line": 45,
 							"character": 6,
-							"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/validators.ts#L45"
+							"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/validators.ts#L45"
 						}
 					],
 					"signatures": [
 						{
-							"id": 3907,
+							"id": 945,
 							"name": "isValidADRange",
 							"variant": "signature",
 							"kind": 4096,
@@ -985,12 +990,12 @@
 									"fileName": "utils/validators.ts",
 									"line": 45,
 									"character": 23,
-									"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/validators.ts#L45"
+									"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/validators.ts#L45"
 								}
 							],
 							"parameters": [
 								{
-									"id": 3908,
+									"id": 946,
 									"name": "AD_date",
 									"variant": "param",
 									"kind": 32768,
@@ -1022,7 +1027,7 @@
 					]
 				},
 				{
-					"id": 3900,
+					"id": 938,
 					"name": "isValidADYear",
 					"variant": "declaration",
 					"kind": 64,
@@ -1032,12 +1037,12 @@
 							"fileName": "utils/validators.ts",
 							"line": 23,
 							"character": 6,
-							"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/validators.ts#L23"
+							"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/validators.ts#L23"
 						}
 					],
 					"signatures": [
 						{
-							"id": 3901,
+							"id": 939,
 							"name": "isValidADYear",
 							"variant": "signature",
 							"kind": 4096,
@@ -1047,19 +1052,19 @@
 									"fileName": "utils/validators.ts",
 									"line": 23,
 									"character": 22,
-									"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/validators.ts#L23"
+									"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/validators.ts#L23"
 								}
 							],
 							"parameters": [
 								{
-									"id": 3902,
+									"id": 940,
 									"name": "yearInput",
 									"variant": "param",
 									"kind": 32768,
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"target": 3879,
+										"target": 917,
 										"name": "yearInput",
 										"package": "date-np"
 									}
@@ -1073,7 +1078,7 @@
 					]
 				},
 				{
-					"id": 3909,
+					"id": 947,
 					"name": "isValidBSRange",
 					"variant": "declaration",
 					"kind": 64,
@@ -1097,12 +1102,12 @@
 							"fileName": "utils/validators.ts",
 							"line": 76,
 							"character": 6,
-							"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/validators.ts#L76"
+							"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/validators.ts#L76"
 						}
 					],
 					"signatures": [
 						{
-							"id": 3910,
+							"id": 948,
 							"name": "isValidBSRange",
 							"variant": "signature",
 							"kind": 4096,
@@ -1135,12 +1140,12 @@
 									"fileName": "utils/validators.ts",
 									"line": 76,
 									"character": 23,
-									"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/validators.ts#L76"
+									"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/validators.ts#L76"
 								}
 							],
 							"parameters": [
 								{
-									"id": 3911,
+									"id": 949,
 									"name": "BS_date",
 									"variant": "param",
 									"kind": 32768,
@@ -1164,7 +1169,7 @@
 					]
 				},
 				{
-					"id": 3897,
+					"id": 935,
 					"name": "isValidBSYear",
 					"variant": "declaration",
 					"kind": 64,
@@ -1188,12 +1193,12 @@
 							"fileName": "utils/validators.ts",
 							"line": 18,
 							"character": 6,
-							"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/validators.ts#L18"
+							"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/validators.ts#L18"
 						}
 					],
 					"signatures": [
 						{
-							"id": 3898,
+							"id": 936,
 							"name": "isValidBSYear",
 							"variant": "signature",
 							"kind": 4096,
@@ -1226,12 +1231,12 @@
 									"fileName": "utils/validators.ts",
 									"line": 18,
 									"character": 22,
-									"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/validators.ts#L18"
+									"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/validators.ts#L18"
 								}
 							],
 							"parameters": [
 								{
-									"id": 3899,
+									"id": 937,
 									"name": "yearInput",
 									"variant": "param",
 									"kind": 32768,
@@ -1246,7 +1251,7 @@
 									},
 									"type": {
 										"type": "reference",
-										"target": 3879,
+										"target": 917,
 										"name": "yearInput",
 										"package": "date-np"
 									}
@@ -1264,11 +1269,11 @@
 				{
 					"title": "Functions",
 					"children": [
-						3903,
-						3906,
-						3900,
-						3909,
-						3897
+						941,
+						944,
+						938,
+						947,
+						935
 					]
 				}
 			],
@@ -1276,26 +1281,26 @@
 				{
 					"title": "Other",
 					"children": [
-						3903,
-						3900
+						941,
+						938
 					]
 				},
 				{
 					"title": "validators\nChecks if the given date is a valid AD date.",
 					"children": [
-						3906
+						944
 					]
 				},
 				{
 					"title": "validators\nChecks if the given date is a valid BS date.",
 					"children": [
-						3897
+						935
 					]
 				},
 				{
 					"title": "validators\nChecks if the given date is a valid BS date.\nThe date before 2000 poush 17 is not valid as of now.\nWill try to fix this later on. TODO: Fix this.",
 					"children": [
-						3909
+						947
 					]
 				}
 			],
@@ -1304,7 +1309,7 @@
 					"fileName": "utils/validators.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/bright-office/date-np/blob/fbf44fae1e5e29a284a64ca730ecee7b2370e7ec/utils/validators.ts#L1"
+					"url": "https://github.com/bright-office/date-np/blob/274477d83dd4dfeedb4c1c1cc6c0703169fa9f16/utils/validators.ts#L1"
 				}
 			]
 		}
@@ -1313,12 +1318,12 @@
 		{
 			"title": "Modules",
 			"children": [
-				3863,
-				3895,
-				3871,
-				3864,
-				3878,
-				3896
+				901,
+				933,
+				909,
+				902,
+				916,
+				934
 			]
 		}
 	],
@@ -1330,7 +1335,7 @@
 		},
 		{
 			"kind": "code",
-			"text": "```bash\nbunx jsr add @saroj/date-np\n```"
+			"text": "```bash\nbunx jsr add @bright/date-np\n```"
 		},
 		{
 			"kind": "text",
@@ -1338,210 +1343,214 @@
 		},
 		{
 			"kind": "code",
-			"text": "```bash\nnpx jsr install @saroj/date-np\n```"
+			"text": "```bash\nnpx jsr install @bright/date-np\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n# TODO: \nThis project is still in it's early stages it's a work in progress.\n- [x] Add docs \n    - [x] For documentation \n    - [x] For publishing to jsr Not going this route \n- [x] Setting up test cases for conversion functions.\n- [x] Writing basic conversion functions and making nepali date work.\n    - [ ] Conversion from AD to BS date. \n- [x] Add tests.\n\n- [ ] Deciding on using date-fns or using custom functions.\n- [ ] Fixing the scripts naming convention and scripts.\n- [ ] Fixing the auto generated docs.\n- [ ] Creating a picker for react. \n- [ ] Making the exports good and publishing to jsr.\n- [ ] Publishing to npm.\n- [ ] Creating a good enough landing page and hosting it on github pages.\n- [ ] Creating contributing guidelines and design guidelines."
 		}
 	],
 	"symbolIdMap": {
-		"3863": {
-			"sourceFileName": "src/index.ts",
+		"901": {
+			"sourceFileName": "src/hooks/useDate.ts",
 			"qualifiedName": ""
 		},
-		"3864": {
+		"902": {
 			"sourceFileName": "utils/Errors.ts",
 			"qualifiedName": ""
 		},
-		"3865": {
+		"903": {
 			"sourceFileName": "utils/Errors.ts",
 			"qualifiedName": "Errors"
 		},
-		"3866": {
+		"904": {
 			"sourceFileName": "utils/Errors.ts",
 			"qualifiedName": "__object"
 		},
-		"3867": {
+		"905": {
 			"sourceFileName": "utils/Errors.ts",
 			"qualifiedName": "__object.INVALID_BS_YEAR"
 		},
-		"3868": {
+		"906": {
 			"sourceFileName": "utils/Errors.ts",
 			"qualifiedName": "__object.INVALID_AD_YEAR"
 		},
-		"3869": {
+		"907": {
 			"sourceFileName": "utils/Errors.ts",
 			"qualifiedName": "__object.INVALID_BS_DATE_RANGE"
 		},
-		"3870": {
+		"908": {
 			"sourceFileName": "utils/Errors.ts",
 			"qualifiedName": "__object.INVALID_AD_DATE_RANGE"
 		},
-		"3871": {
+		"909": {
 			"sourceFileName": "utils/conversion.ts",
 			"qualifiedName": ""
 		},
-		"3872": {
+		"910": {
 			"sourceFileName": "utils/conversion.ts",
 			"qualifiedName": "convertFromADToBS"
 		},
-		"3873": {
+		"911": {
 			"sourceFileName": "utils/conversion.ts",
 			"qualifiedName": "convertFromADToBS"
 		},
-		"3874": {
+		"912": {
 			"sourceFileName": "utils/conversion.ts",
 			"qualifiedName": "date"
 		},
-		"3875": {
+		"913": {
 			"sourceFileName": "utils/conversion.ts",
 			"qualifiedName": "convertFromBSToAD"
 		},
-		"3876": {
+		"914": {
 			"sourceFileName": "utils/conversion.ts",
 			"qualifiedName": "convertFromBSToAD"
 		},
-		"3877": {
+		"915": {
 			"sourceFileName": "utils/conversion.ts",
 			"qualifiedName": "BS_date"
 		},
-		"3878": {
+		"916": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": ""
 		},
-		"3879": {
+		"917": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "yearInput"
 		},
-		"3880": {
+		"918": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "calcTotalDaysFromMinBS"
 		},
-		"3881": {
+		"919": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "calcTotalDaysFromMinBS"
 		},
-		"3882": {
+		"920": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "BS_date"
 		},
-		"3883": {
+		"921": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "calcTotalDaysInBSYear"
 		},
-		"3884": {
+		"922": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "calcTotalDaysInBSYear"
 		},
-		"3885": {
+		"923": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "year"
 		},
-		"3886": {
+		"924": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "calcTotalDaysFromMinAD"
 		},
-		"3887": {
+		"925": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "calcTotalDaysFromMinAD"
 		},
-		"3888": {
+		"926": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "AD_date"
 		},
-		"3889": {
+		"927": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "addDaysToMinBSDate"
 		},
-		"3890": {
+		"928": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "addDaysToMinBSDate"
 		},
-		"3891": {
+		"929": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "days"
 		},
-		"3892": {
+		"930": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "extractYear"
 		},
-		"3893": {
+		"931": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "extractYear"
 		},
-		"3894": {
+		"932": {
 			"sourceFileName": "utils/helpers.ts",
 			"qualifiedName": "input"
 		},
-		"3895": {
+		"933": {
 			"sourceFileName": "utils/index.ts",
 			"qualifiedName": ""
 		},
-		"3896": {
+		"934": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": ""
 		},
-		"3897": {
+		"935": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "isValidBSYear"
 		},
-		"3898": {
+		"936": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "isValidBSYear"
 		},
-		"3899": {
+		"937": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "yearInput"
 		},
-		"3900": {
+		"938": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "isValidADYear"
 		},
-		"3901": {
+		"939": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "isValidADYear"
 		},
-		"3902": {
+		"940": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "yearInput"
 		},
-		"3903": {
+		"941": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "isADLeapYear"
 		},
-		"3904": {
+		"942": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "isADLeapYear"
 		},
-		"3905": {
+		"943": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "yearInput"
 		},
-		"3906": {
+		"944": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "isValidADRange"
 		},
-		"3907": {
+		"945": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "isValidADRange"
 		},
-		"3908": {
+		"946": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "AD_date"
 		},
-		"3909": {
+		"947": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "isValidBSRange"
 		},
-		"3910": {
+		"948": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "isValidBSRange"
 		},
-		"3911": {
+		"949": {
 			"sourceFileName": "utils/validators.ts",
 			"qualifiedName": "BS_date"
 		}
 	},
 	"files": {
 		"entries": {
-			"1": "src/index.ts",
+			"1": "src/hooks/useDate.ts",
 			"2": "utils/Errors.ts",
 			"3": "utils/conversion.ts",
 			"4": "utils/helpers.ts",
@@ -1549,12 +1558,12 @@
 			"6": "utils/validators.ts"
 		},
 		"reflections": {
-			"1": 3863,
-			"2": 3864,
-			"3": 3871,
-			"4": 3878,
-			"5": 3895,
-			"6": 3896
+			"1": 901,
+			"2": 902,
+			"3": 909,
+			"4": 916,
+			"5": 933,
+			"6": 934
 		}
 	}
 }

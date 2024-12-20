@@ -1,7 +1,10 @@
+import HelloCOMP from "date-np";
+
 function App() {
     return (
         <div>
-            Hello
+            hello
+            <HelloCOMP />
         </div>
     )
 }

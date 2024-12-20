@@ -24,19 +24,23 @@
     ".": {
       "import": "./dist/index.ts",
       "types": "./dist/types/index.d.ts"
-    },
-    "./picker": {
-        "import": "./dist/picker/index.ts",
-        "types": "./dist/picker/types/index.d.ts"
     }
   },
+  "main": "./dist/index.ts",
+  "types": "./dist/types/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
     "watch:auto-gen-docs": "typedoc --watch",
     "preview:docs": "cd docs && bun run start",
-    "dev": "concurrently \"bun run watch:auto-gen-docs\" \"bun run preview:docs\" -c \"green,blue\" -n \"gen-docs,preview\" ",
+    "dev:lib": "vite build --watch",
+    "build:lib": "vite build",
+    "build:types": "tsc --emitDeclarationOnly",
+    "watch:types": "tsc --emitDeclarationOnly --watch",
+    "dev:example": "cd example/react && bun run dev",
+    "link": "bun link && cd example/react/ && bun link date-np",
+    "dev": "bun run link && concurrently \"bun run watch:auto-gen-docs\" \"bun run preview:docs\" \"bun run dev:lib\" \"bun run dev:example\" -c \"green,blue,pink,white\" -n \"gen-docs,preview,library,example\"",
     "test": "vitest",
     "publish:docs": "typedoc && cd docs && bun run deploy"
   },
@@ -48,10 +52,15 @@
     "react-dom": "^19.0.0",
     "typedoc": "^0.27.5",
     "typedoc-plugin-markdown": "^4.3.2",
+    "vite": "^5.4.11",
     "vitest": "^2.1.8"
   },
   "peerDependencies": {
-      "react": "17 || 18 || 19",
-      "react-dom": "17 || 18 || 19"
+    "react": "17 || 18 || 19",
+    "react-dom": "17 || 18 || 19"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.0.0-beta.8",
+    "tailwindcss": "^4.0.0-beta.8"
   }
 }

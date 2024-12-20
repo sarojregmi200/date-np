@@ -1,5 +1,11 @@
 {
-  "compilerOptions": {
+    "compilerOptions": {
+      // build options
+      "outDir": "dist",
+      "emitDeclarationOnly": true,
+      "declaration": true,
+      "declarationDir": "dist/types",
+
     // Enable latest features
     "lib": ["ESNext", "DOM"],
     "target": "ESNext",
@@ -23,5 +29,11 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noPropertyAccessFromIndexSignature": false
-  }
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "test",
+        "example"
+    ]
 }
