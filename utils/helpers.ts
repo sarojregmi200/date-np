@@ -1,4 +1,4 @@
-import { AD_MONTH, AD_MONTH_LEAP_YEAR, BS_MONTHS, MIN_AD_YEAR, MIN_BS_YEAR, type BS_MONTHS_KEYS } from "../data/constants.ts";
+import { AD_MONTH, AD_MONTH_LEAP_YEAR, BS_MONTHS, MAX_BS_YEAR, MIN_AD_YEAR, MIN_BS_YEAR, type BS_MONTHS_KEYS } from "../data/constants.ts";
 import Errors from "./Errors.ts";
 import { isADLeapYear, isValidADYear, isValidBSYear } from "./validators.ts";
 
@@ -68,23 +68,25 @@ const calcTotalDaysInBSYear = (year: yearInput): number => {
 }
 
 const addDaysToMinBSDate = (days: number): Date => {
-    let BS_year = MIN_BS_YEAR;
+    let BS_year = MIN_BS_YEAR as BS_MONTHS_KEYS;
     let BS_month = 8;
-    let BS_day = 16;
+    let BS_day = 17;
+    let month_end = BS_MONTHS[BS_year][BS_month];
 
     for (let i = 0; i < days; i++) {
-        BS_day += i;
+        BS_day++;
+        if (BS_day <= month_end)
+            continue;
 
-        const month_end = BS_MONTHS[BS_year as BS_MONTHS_KEYS][BS_month];
-        if (BS_day > month_end) {
-            BS_day = 1;
-            BS_month += 1;
-        }
-
-        if (BS_month > 11) {
+        if (BS_month != 12) {
+            BS_month++;
+        } else {
             BS_month = 0;
-            BS_year += 1;
+            BS_year++;
         }
+
+        month_end = BS_MONTHS[BS_year as BS_MONTHS_KEYS][BS_month];
+        BS_day = 1;
     }
 
     return new Date(BS_year, BS_month, BS_day);
@@ -103,7 +105,7 @@ const calcTotalDaysFromMinAD = (AD_date: Date): number => {
 
     // adding this months days
     // Month also starts from 0 so we are checking till <=
-    for (let i = 0; i < AD_date.getMonth() - 1; i++) {
+    for (let i = 0; i < AD_date.getMonth(); i++) {
         totalDays += isLeapYear ? AD_MONTH_LEAP_YEAR[i] : AD_MONTH[i]
     }
 
