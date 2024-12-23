@@ -148,10 +148,52 @@ const extractYear = (input: Date | BS_MONTHS_KEYS | number): number => {
     throw new TypeError("Error while extracting year, input to extractYear must be a Date, BS_MONTHS_KEYS or a number");
 }
 
+export type tgetMonthTotalDaysProps = {
+    date: Date,
+    locale: "en" | "ne",
+}
+
+const getTotalDaysInMonth = ({ date, locale }: tgetMonthTotalDaysProps) => {
+    if (locale === "en") {
+        const isValid = isValidADYear(date);
+        if (!isValid)
+            throw Errors.INVALID_AD_YEAR;
+
+        const isLeapYear = isADLeapYear(date);
+        return isLeapYear ? AD_MONTH_LEAP_YEAR[date.getMonth()] : AD_MONTH[date.getMonth()];
+    }
+
+    const isvalid = isValidBSYear(date);
+    if (!isvalid)
+        throw Errors.INVALID_BS_YEAR;
+
+    return BS_MONTHS[date.getFullYear() as BS_MONTHS_KEYS][date.getMonth()];
+};
+
+const getStartingDayOfMonth = ({ date, locale }: tgetMonthTotalDaysProps) => {
+    if (locale === "en") {
+        const isValid = isValidADYear(date);
+        if (!isValid)
+            throw Errors.INVALID_AD_YEAR;
+
+        return (new Date(date.getFullYear(), date.getMonth(), 1).getDay());
+    }
+
+    // TODO: See how can i get the starting day of the month.
+    // future note: converting and using JS date obj can be a good idea. 
+    const isvalid = isValidBSYear(date);
+    if (!isvalid)
+        throw Errors.INVALID_BS_YEAR;
+
+    return BS_MONTHS[date.getFullYear() as BS_MONTHS_KEYS][date.getMonth()];
+};
+
 export {
     calcTotalDaysFromMinBS,
     calcTotalDaysInBSYear,
     calcTotalDaysFromMinAD,
     addDaysToMinBSDate,
     extractYear,
+    getTotalDaysInMonth,
+    getStartingDayOfMonth
 } 

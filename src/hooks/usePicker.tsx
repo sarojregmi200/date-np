@@ -23,7 +23,7 @@ const usePicker = () => {
 const PickerProvider = ({ children }: { children: React.ReactNode }) => {
     const today = new Date();
     const [pickerState, setPickerState] = useState<pickerContextType["pickerState"]>({
-        currentDate: today,
+        currentDate: new Date(today.getFullYear(), today.getMonth() - 1, today.getDate()),
         isActive: true,
         locale: "en",
     });
