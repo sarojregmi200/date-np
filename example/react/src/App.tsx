@@ -1,4 +1,4 @@
-import HelloCOMP from "date-np";
+import { HelloCOMP } from "date-np";
 
 function App() {
     return (

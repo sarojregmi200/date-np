@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "date-np": "link:date-np"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
@@ -25,6 +26,6 @@
     "globals": "^15.13.0",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.18.1",
-    "vite": "^6.0.3"
+    "vite": "5"
   }
 }

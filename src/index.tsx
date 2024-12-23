@@ -1,9 +1,11 @@
+const a: number = 10;
+
 const HelloCOMP = () => {
-    return "Hello";
+    return a;
 };
 
 const HelloAgain = () => {
-    return "Hello Again";
+    return `Hello Again ${a}`;
 }
 
 export {
