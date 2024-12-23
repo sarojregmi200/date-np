@@ -14,7 +14,7 @@ export const WeekRow = () => {
         <>
             {weekNames.map((name, index) => {
                 return (
-                    <div key={index} className="w-full h-full rounded-sm flex items-center gap-2.5 justify-center">
+                    <div key={index} className="w-full h-full grid place-items-center font-light">
                         {name}
                     </div>
                 )

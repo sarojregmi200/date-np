@@ -21,8 +21,8 @@ const Day = (props: tdayProps) => {
     } = props;
 
 
-    const { updatePickerDay, pickerState } = usePicker();
-    const { activeDate } = pickerState;
+    const { updatePickerDay, pickerState, updatePickerMonth } = usePicker();
+    const { activeDate, activeMonth, activeYear } = pickerState;
     const isActive = areDatesEqual(date, activeDate);
 
     const handlDayClick = (e: MouseEvent<HTMLDivElement>) => {
@@ -31,6 +31,12 @@ const Day = (props: tdayProps) => {
 
         onClick?.(date, e);
         updatePickerDay(date);
+
+
+        if (activeMonth !== date.getMonth()) {
+            const yearOffset = date.getFullYear() - activeYear;
+            updatePickerMonth(date.getMonth() + yearOffset * 12);
+        }
     }
 
     return (

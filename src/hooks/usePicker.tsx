@@ -41,12 +41,6 @@ const usePicker = () => {
             monthOffset = month;
         }
 
-        console.log({
-            yearOffset,
-            monthOffset,
-            month
-        })
-
         setPickerState((prevState) => {
             return {
                 ...prevState,

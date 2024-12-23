@@ -20,11 +20,6 @@ const PickerHeader = () => {
             ? activeMonth + 1
             : activeMonth - 1;
 
-        console.log({
-            activeMonth,
-            newMonth
-        })
-
         updatePickerMonth(newMonth);
     }
 
