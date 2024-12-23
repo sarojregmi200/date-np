@@ -1,5 +1,9 @@
+import { CALENDAR } from "../../data/locale";
 import { cn } from "../../utils/clsx";
-import { getStartingDayOfMonth, getTotalDaysInMonth } from "../../utils/helpers";
+import {
+    getStartingDayOfMonth,
+    getTotalDaysInMonth
+} from "../../utils/helpers";
 import { areDatesEqual } from "../../utils/validators";
 import { usePicker } from "../hooks/usePicker";
 import Day from "./day";
@@ -54,14 +58,40 @@ const PickerBody = () => {
         })
     }
 
-    return (
-        <div className="flex items-center justify-between w-full">
+    /**
+     * Conditionally render if mode is set to date.
+     */
+    const DatePickerBody = () => {
+        if (pickerState.mode !== "date")
+            return null;
+
+        return (
             <Month>
                 <WeekRow />
                 <TrailingPrevMonthDays />
                 <ThisMonthDays />
                 <PrecidingNxtMonthDays />
-            </Month>
+            </Month>)
+    }
+
+    const MonthPickerBody = () => {
+        if (pickerState.mode !== "month")
+            return null
+        return ("Month Picker")
+    }
+
+    const YearPickerBody = () => {
+        if (pickerState.mode !== "year")
+            return null
+
+        return "Year Picker"
+    }
+
+    return (
+        <div className="flex items-center justify-between w-full min-h-72">
+            <DatePickerBody />
+            <MonthPickerBody />
+            <YearPickerBody />
         </div>
     )
 }

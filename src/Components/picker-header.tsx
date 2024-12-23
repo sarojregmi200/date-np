@@ -2,7 +2,7 @@ import { CALENDAR } from "../../data/locale";
 import { usePicker } from "../hooks/usePicker";
 
 const PickerHeader = () => {
-    const { pickerState, updatePickerMonth } = usePicker();
+    const { pickerState, updatePickerMonth, togglePickerMode } = usePicker();
     const { activeMonth, activeDate, activeYear, locale } = pickerState;
 
     const currentDate = new Date(activeYear, activeMonth, activeDate.getDate());
@@ -23,6 +23,14 @@ const PickerHeader = () => {
         updatePickerMonth(newMonth);
     }
 
+    const handleMonthClick = () => {
+        togglePickerMode("month", "date");
+    }
+
+    const handleYearClick = () => {
+        togglePickerMode("year", "date");
+    }
+
     return (
         <div className="flex items-center justify-between w-full">
             <div
@@ -31,11 +39,11 @@ const PickerHeader = () => {
             >
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6" /></svg>
             </div>
-            <div className="wrapper space-x-2">
-                <span>
+            <div className="wrapper space-x-2 cursor-pointer">
+                <span onClick={handleMonthClick} className="hover:underline">
                     {month?.EN}
                 </span>
-                <span>
+                <span onClick={handleYearClick} className="hover:underline">
                     {year}
                 </span>
             </div>

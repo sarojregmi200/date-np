@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, type Dispatch, type SetStateAction } from "react";
 
-type pickerContextType = {
+type tpickerContextType = {
     pickerState: {
         today: Date;
         isActive: boolean;
@@ -8,11 +8,12 @@ type pickerContextType = {
         activeDate: Date,
         activeMonth: number,
         activeYear: number,
+        mode: "date" | "month" | "year",
     };
-    setPickerState: Dispatch<SetStateAction<pickerContextType["pickerState"]>>;
+    setPickerState: Dispatch<SetStateAction<tpickerContextType["pickerState"]>>;
 }
 
-const PickerContext = createContext<pickerContextType | null>(null);
+const PickerContext = createContext<tpickerContextType | null>(null);
 
 const usePicker = () => {
     const pickerContextValue = useContext(PickerContext);
@@ -50,22 +51,37 @@ const usePicker = () => {
         })
     }
 
+    /**
+     * Toggles the picker mode to `toggleIf` param if the previous mode is not equal to 
+     * `toggleIf` param else it will toggle to the provided `defaultMode`.
+     */
+    const togglePickerMode = (toggleIf: tpickerContextType["pickerState"]["mode"], defaultMode: tpickerContextType["pickerState"]["mode"]) => {
+        setPickerState((prevState) => {
+            return {
+                ...prevState,
+                mode: prevState.mode === toggleIf ? defaultMode : toggleIf,
+            }
+        })
+    }
+
     return {
         ...pickerContextValue,
         updatePickerDay,
-        updatePickerMonth
+        updatePickerMonth,
+        togglePickerMode,
     };
 }
 
 const PickerProvider = ({ children }: { children: React.ReactNode }) => {
     const today = new Date();
-    const [pickerState, setPickerState] = useState<pickerContextType["pickerState"]>({
+    const [pickerState, setPickerState] = useState<tpickerContextType["pickerState"]>({
         today: today,
         activeDate: today,
         activeMonth: today.getMonth(),
         activeYear: today.getFullYear(),
         isActive: true,
         locale: "en",
+        mode: "date",
     });
 
     return (

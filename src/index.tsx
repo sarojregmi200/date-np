@@ -7,14 +7,6 @@ export type tpickerProps = {
     className?: string;
 }
 
-/**
- * @category picker
- * The picker component is the main component of the date-np package.
- * It is a date picker that is easy to use and customize.
- * @param {tpickerProps} props - The props that are passed to the picker component.
- * @returns {React.ReactNode} - The picker component.
- */
-
 const Picker = (props: tpickerProps) => {
     return (
         <PickerProvider>
