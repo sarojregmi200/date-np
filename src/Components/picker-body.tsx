@@ -10,13 +10,14 @@ const PickerBody = () => {
 
     const thisMonthtotalDays = getTotalDaysInMonth({ date: new Date(activeYear, activeMonth, activeDate.getDate()), locale });
     const thisMonthStartDay = getStartingDayOfMonth({ date: new Date(activeYear, activeMonth, activeDate.getDate()), locale });
-    const prevMonthTotalDays = getTotalDaysInMonth({ date: new Date(activeYear, activeMonth, activeDate.getDate()), locale });
+    const prevMonthTotalDays = getTotalDaysInMonth({ date: new Date(activeYear, activeMonth - 1, activeDate.getDate()), locale });
 
     const plotablePrevMonthDays = thisMonthStartDay;
+    console.log(prevMonthTotalDays)
 
-    const PrecidingPrevMonthDays = () => {
+    const TrailingPrevMonthDays = () => {
         return [...Array(plotablePrevMonthDays)].map((_, index) => {
-            const date = prevMonthTotalDays - (plotablePrevMonthDays - index);
+            const date = prevMonthTotalDays - (plotablePrevMonthDays - (index + 1));
 
             return <Day
                 date={new Date(activeYear, activeMonth - 1, date)}
@@ -35,7 +36,7 @@ const PickerBody = () => {
         })
     }
 
-    const TrailingNxtMonthDays = () => {
+    const PrecidingNxtMonthDays = () => {
         const lastDateDay = new Date(activeYear, activeMonth, thisMonthtotalDays).getDay() + 1;
         const trailingDays = 7 - lastDateDay;
 
@@ -53,13 +54,12 @@ const PickerBody = () => {
         <div className="flex items-center justify-between w-full">
             <Month>
                 <WeekRow />
-                <PrecidingPrevMonthDays />
+                <TrailingPrevMonthDays />
                 <ThisMonthDays />
-                <TrailingNxtMonthDays />
+                <PrecidingNxtMonthDays />
             </Month>
         </div>
     )
 }
-
 
 export default PickerBody;

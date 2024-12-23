@@ -17,8 +17,13 @@ const PickerHeader = () => {
 
     const handleMonthChange = (changeDirection: "next" | "previous") => {
         const newMonth = changeDirection === "next"
-            ? currentDate.getMonth() + 1
-            : currentDate.getMonth() - 1;
+            ? activeMonth + 1
+            : activeMonth - 1;
+
+        console.log({
+            activeMonth,
+            newMonth
+        })
 
         updatePickerMonth(newMonth);
     }
