@@ -20,6 +20,12 @@ export default defineConfig({
             // these are required to be present in the env where this is going to be used. 
             external: ['react', 'react-dom', 'react/jsx-runtime'],
             output: {
+                intro: (chunk) => {
+                    if (chunk.fileName === 'index.js') {
+                        return `import "./style.css";`
+                    }
+                    return ''
+                },
                 preserveModules: true,
                 dir: 'dist',
                 entryFileNames: '[name].js',
@@ -28,8 +34,8 @@ export default defineConfig({
         }
     },
     plugins: [
+        tailwindcss(),
         dts({ outDir: "./dist/types" }),
         viteReact(),
-        tailwindcss()
     ]
 })
