@@ -1,8 +1,8 @@
-import tailwindcss from '@tailwindcss/vite'
-import viteReact from '@vitejs/plugin-react'
-import { resolve } from 'path'
-import React from 'react'
-import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite';
+import viteReact from '@vitejs/plugin-react';
+import { resolve } from 'path';
+import { defineConfig } from 'vite';
+import dts from "vite-plugin-dts";
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -15,12 +15,11 @@ export default defineConfig({
         outDir: "dist",
         emptyOutDir: true,
         rollupOptions: {
+            // Means;
+            // don't include this in the final build.
+            // these are required to be present in the env where this is going to be used. 
             external: ['react', 'react-dom', 'react/jsx-runtime'],
             output: {
-                globals: {
-                    react: 'React',
-                    "react-dom": 'ReactDOM'
-                },
                 preserveModules: true,
                 dir: 'dist',
                 entryFileNames: '[name].js',
@@ -28,5 +27,9 @@ export default defineConfig({
             }
         }
     },
-    plugins: [viteReact(), tailwindcss()]
+    plugins: [
+        dts({ outDir: "./dist/types" }),
+        viteReact(),
+        tailwindcss()
+    ]
 })
