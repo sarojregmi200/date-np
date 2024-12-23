@@ -1,10 +1,12 @@
-import { HelloCOMP } from "date-np";
+import Picker from "date-np"
+import Day from "date-np"
 
 function App() {
     return (
         <div>
             hello
-            <HelloCOMP />
+            <Picker />
+            <Day />
         </div>
     )
 }

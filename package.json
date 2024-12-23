@@ -1,7 +1,5 @@
 {
   "name": "date-np",
-  "module": "index.ts",
-  "type": "module",
   "author": {
     "name": "Saroj Regmi",
     "url": "https://sarojregmi.sh"
@@ -22,14 +20,14 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/date-np.js",
+      "import": "./dist/index.js",
       "types": "./dist/types/src/index.d.ts"
     }
   },
-
-  "main": "./dist/date-np.js",
-  "types": "./dist/types/src/index.d.ts",
-
+  "main": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "type": "module",
+  "module": "./dist/index.js",
   "files": [
     "dist"
   ],
@@ -42,7 +40,7 @@
     "watch:types": "tsc --emitDeclarationOnly --watch",
     "dev:example": "cd example/react && bun run dev",
     "link": "bun link && cd example/react/ && bun link date-np",
-    "dev": "concurrently \"bun run watch:auto-gen-docs\" \"bun run preview:docs\" \"bun run dev:lib\" \"bun run link && bun run dev:example\" -c \"green,blue,pink,white\" -n \"gen-docs,preview,library,example\"",
+    "dev": "concurrently \"bun run watch:auto-gen-docs\" \"bun run preview:docs\" \"bun run dev:lib\" \"bun run watch:types\" \"bun run link && bun run dev:example\" -c \"green,blue,pink,gray,white\" -n \"gen-docs,preview,library,types,example\"",
     "test": "vitest",
     "publish:docs": "typedoc && cd docs && bun run deploy"
   },
@@ -63,6 +61,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.0-beta.8",
+    "@vitejs/plugin-react": "^4.3.4",
     "tailwindcss": "^4.0.0-beta.8"
   }
 }

@@ -1,14 +1,16 @@
-const a: number = 10;
+import Day from "./Components/day";
+import Week from "./Components/day";
+import Month from "./Components/day";
 
-const HelloCOMP = () => {
-    return a;
-};
+const Picker = () => {
+    return (
+        <div>
+            <Day />
+            <Week />
+            <Month />
+        </div>
+    )
 
-const HelloAgain = () => {
-    return `Hello Again ${a}`;
 }
 
-export {
-    HelloCOMP,
-    HelloAgain
-}
+export default Picker;
