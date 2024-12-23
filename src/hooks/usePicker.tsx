@@ -2,9 +2,12 @@ import { createContext, useContext, useState, type Dispatch, type SetStateAction
 
 type pickerContextType = {
     pickerState: {
-        currentDate: Date;
+        today: Date;
         isActive: boolean;
         locale: "en" | "ne";
+        activeDate: Date,
+        activeMonth: number,
+        activeYear: number,
     };
     setPickerState: Dispatch<SetStateAction<pickerContextType["pickerState"]>>;
 }
@@ -17,13 +20,50 @@ const usePicker = () => {
         throw new Error("usePicker must be used within a PickerProvider");
     }
 
-    return pickerContextValue;
+    const { setPickerState } = pickerContextValue;
+
+    const updatePickerDay = (day: Date) => {
+        setPickerState((prevState) => {
+            return {
+                ...prevState,
+                activeDate: day,
+            }
+        })
+    }
+
+    const updatePickerMonth = (month: number) => {
+        let yearOffset = 0;
+        let monthOffset = 0;
+        if (month > 11) {
+            yearOffset = month / 11;
+            monthOffset = month % 11;
+        } else {
+            monthOffset = month;
+        }
+
+        setPickerState((prevState) => {
+            return {
+                ...prevState,
+                activeYear: prevState.activeYear + yearOffset,
+                activeMonth: monthOffset,
+            }
+        })
+    }
+
+    return {
+        ...pickerContextValue,
+        updatePickerDay,
+        updatePickerMonth
+    };
 }
 
 const PickerProvider = ({ children }: { children: React.ReactNode }) => {
     const today = new Date();
     const [pickerState, setPickerState] = useState<pickerContextType["pickerState"]>({
-        currentDate: new Date(today.getFullYear(), today.getMonth() - 1, today.getDate()),
+        today: today,
+        activeDate: today,
+        activeMonth: today.getMonth(),
+        activeYear: today.getFullYear(),
         isActive: true,
         locale: "en",
     });

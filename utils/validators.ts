@@ -93,10 +93,30 @@ const isValidBSRange = (BS_date: Date): boolean => {
     return true;
 }
 
+/**
+ * Checks whether if two dates are equal or not.
+ * Ignores there time and only checks the year month and date.
+ * @param {Date} date1 - The first date to be checked.
+ * @param {Date} date2 - The second date to be checked.
+ * 
+ * @returns {boolean} - True if the dates are equal, false otherwise.
+ */
+const areDatesEqual = (date1: Date, date2: Date): boolean => {
+    if (date1.getFullYear() === date2.getFullYear()
+        && date1.getMonth() === date2.getMonth()
+        && date1.getDate() === date2.getDate())
+        return true;
+
+    return false;
+}
+
+
 export {
     isValidBSYear,
     isValidADYear,
     isADLeapYear,
     isValidADRange,
-    isValidBSRange
+    isValidBSRange,
+    areDatesEqual
+
 }

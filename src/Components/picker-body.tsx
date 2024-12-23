@@ -6,45 +6,45 @@ import { WeekRow } from "./week-row";
 
 const PickerBody = () => {
     const { pickerState } = usePicker();
-    const { currentDate, locale } = pickerState;
+    const { today, activeDate, activeYear, activeMonth, locale } = pickerState;
 
-    const thisMonthtotalDays = getTotalDaysInMonth({ date: currentDate, locale });
-    const thisMonthStartDay = getStartingDayOfMonth({ date: currentDate, locale });
-    const prevMonthTotalDays = getTotalDaysInMonth({ date: new Date(currentDate.getFullYear(), currentDate.getMonth() - 1), locale });
+    const thisMonthtotalDays = getTotalDaysInMonth({ date: new Date(activeYear, activeMonth, activeDate.getDate()), locale });
+    const thisMonthStartDay = getStartingDayOfMonth({ date: new Date(activeYear, activeMonth, activeDate.getDate()), locale });
+    const prevMonthTotalDays = getTotalDaysInMonth({ date: new Date(activeYear, activeMonth, activeDate.getDate()), locale });
 
     const plotablePrevMonthDays = thisMonthStartDay;
 
     const PrecidingPrevMonthDays = () => {
-        return [...Array(thisMonthStartDay)].map((_, index) => {
+        return [...Array(plotablePrevMonthDays)].map((_, index) => {
+            const date = prevMonthTotalDays - (plotablePrevMonthDays - index);
+
             return <Day
-                day={index + 1}
+                date={new Date(activeYear, activeMonth - 1, date)}
                 key={index}
                 disabled={true}
-                isToday={index + 1 === currentDate.getDate()}
             />
         })
     }
     const ThisMonthDays = () => {
         return [...Array(thisMonthtotalDays)].map((_, index) => {
             return <Day
-                day={index + 1}
+                date={new Date(activeYear, activeMonth, index + 1)}
                 key={index}
                 disabled={false}
-                isToday={index + 1 === currentDate.getDate()}
             />
         })
     }
 
     const TrailingNxtMonthDays = () => {
-        const lastDateDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), thisMonthtotalDays).getDay() + 1;
+        const lastDateDay = new Date(activeYear, activeMonth, thisMonthtotalDays).getDay() + 1;
         const trailingDays = 7 - lastDateDay;
 
         return [...Array(trailingDays)].map((_, index) => {
             return <Day
-                day={index + 1}
+                date={new Date(activeYear, activeMonth + 1, index + 1)}
                 key={index}
                 disabled={true}
-                isToday={index + 1 === currentDate.getDate()}
+                isToday={index + 1 === today.getDate()}
             />
         })
     }

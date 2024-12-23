@@ -29,6 +29,12 @@ This project is still in it's early stages it's a work in progress.
     - [ ] Conversion from AD to BS date. 
 - [x] Add tests.
 
+- [ ] Date picker.
+    - [x] month switching. 
+    - [x] selection of date. 
+    - [ ] month selection. 
+    - [ ] year selection.
+
 - [ ] Deciding on using date-fns or using custom functions.
 - [ ] Fixing the scripts naming convention and scripts.
 - [ ] Fixing the auto generated docs.
