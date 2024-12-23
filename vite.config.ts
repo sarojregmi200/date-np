@@ -21,8 +21,8 @@ export default defineConfig({
             external: ['react', 'react-dom', 'react/jsx-runtime'],
             output: {
                 intro: (chunk) => {
-                    if (chunk.fileName === 'index.js') {
-                        return `import "./style.css";`
+                    if (chunk.fileName.includes('src/index.js')) {
+                        return `import "../style.css";`
                     }
                     return ''
                 },

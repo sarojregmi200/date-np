@@ -1,6 +1,22 @@
-export const LOCALE = {
+type calendarType = "AD" | "BS"
+
+/**
+ * Types of available calendar
+ */
+export type tcalendar = Record<calendarType, {
+    months: Record<number, {
+        EN: string,
+        NP: string,
+    }>,
+    days: Record<number, {
+        EN: string,
+        NP: string,
+    }>
+}>
+
+export const CALENDAR: tcalendar = {
     BS: {
-        MONTHS: {
+        months: {
             0: {
                 EN: "Baishakh",
                 NP: "बैशाख",
@@ -50,7 +66,7 @@ export const LOCALE = {
                 NP: "चैत्र",
             },
         },
-        DAYS: {
+        days: {
             1: {
                 EN: "Aaitabar",
                 NP: "आइतबार",
@@ -83,7 +99,7 @@ export const LOCALE = {
     },
 
     AD: {
-        MONTHS: {
+        months: {
             1: {
                 EN: "January",
                 NP: "जनवरी",
@@ -133,7 +149,7 @@ export const LOCALE = {
                 NP: "दिसम्बर",
             },
         },
-        DAYS: {
+        days: {
             1: {
                 EN: "Sunday",
                 NP: "सन्डे",
@@ -164,4 +180,4 @@ export const LOCALE = {
             },
         },
     },
-} as const
+}

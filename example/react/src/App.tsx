@@ -2,7 +2,12 @@ import Picker from "date-np"
 
 function App() {
     return (
-        <div>
+        <div style={{
+            height: '100vh',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+        }}>
             <Picker />
         </div>
     )
