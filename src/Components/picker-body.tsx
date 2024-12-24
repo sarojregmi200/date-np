@@ -11,7 +11,7 @@ import Month from "./month";
 import { WeekRow } from "./week-row";
 
 const PickerBody = () => {
-    const { pickerState } = usePicker();
+    const { pickerState, updatePickerMonth, updatePickerMode } = usePicker();
     const { today, activeDate, activeYear, activeMonth, locale } = pickerState;
 
     const thisMonthtotalDays = getTotalDaysInMonth({ date: new Date(activeYear, activeMonth, activeDate.getDate()), locale });
@@ -77,7 +77,41 @@ const PickerBody = () => {
     const MonthPickerBody = () => {
         if (pickerState.mode !== "month")
             return null
-        return ("Month Picker")
+
+        let monthsNames: string[] = [];
+        if (pickerState.locale === "en") {
+            // TODO: Add support for translation and language.
+            monthsNames = Object.values(CALENDAR.AD.months).map(month => month.EN);
+        } else {
+            monthsNames = Object.values(CALENDAR.BS.months).map(month => month.EN);
+        }
+
+        const handleMonthChange = (month: number) => {
+            // changing the month
+            updatePickerMonth(month);
+
+            // changing the mode to date
+            updatePickerMode("date");
+        }
+
+        return (
+            <div className="grid grid-cols-2  grid-rows-6 gap-1 items-center w-full h-72 text-sm font-light">
+                {monthsNames.map((month, index) => {
+                    return <button
+                        key={index}
+                        tabIndex={0}
+                        className={cn(
+                            "flex items-center justify-center text-sm rounded-sm px-2 bg-gray-50 h-full cursor-pointer",
+                            "hover:bg-gray-100",
+                            index === activeMonth && "bg-gray-900 text-white hover:bg-gray-800",
+                        )}
+                        onClick={() => handleMonthChange(index)}
+                    >
+                        {month}
+                    </button>
+                })}
+            </div>
+        )
     }
 
     const YearPickerBody = () => {

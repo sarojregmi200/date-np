@@ -7,8 +7,8 @@ type tdayProps = {
     date: Date,
     disabled?: boolean,
     isToday?: boolean,
-    onClick?: (date: Date, e: MouseEvent<HTMLDivElement>) => void,
-} & HTMLAttributes<HTMLDivElement>
+    onClick?: (date: Date, e: MouseEvent<HTMLButtonElement>) => void,
+} & HTMLAttributes<HTMLButtonElement>
 
 const Day = (props: tdayProps) => {
     const {
@@ -25,7 +25,7 @@ const Day = (props: tdayProps) => {
     const { activeDate, activeMonth, activeYear } = pickerState;
     const isActive = areDatesEqual(date, activeDate);
 
-    const handlDayClick = (e: MouseEvent<HTMLDivElement>) => {
+    const handlDayClick = (e: MouseEvent<HTMLButtonElement>) => {
         if (disabled)
             return;
 
@@ -40,7 +40,7 @@ const Day = (props: tdayProps) => {
     }
 
     return (
-        <div
+        <button
             className={cn(
                 "text-center aspect-square rounded-sm items-center justify-center flex text-sm cursor-pointer",
                 "hover:bg-gray-200",
@@ -52,7 +52,7 @@ const Day = (props: tdayProps) => {
             {...rest}
         >
             {date.getDate()}
-        </div>
+        </button>
     )
 }
 export default Day;

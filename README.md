@@ -31,7 +31,7 @@ This project is still in it's early stages it's a work in progress.
 - [ ] Date picker.
     - [x] month switching. 
     - [x] selection of date. 
-    - [ ] month selection. 
+    - [x] month selection. 
     - [ ] year selection.
 - [ ] Creating path aliases.
 - [ ] Deciding on using date-fns or using custom functions.

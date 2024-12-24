@@ -64,11 +64,22 @@ const usePicker = () => {
         })
     }
 
+    const updatePickerMode = (newMode: tpickerContextType["pickerState"]["mode"]) => {
+        setPickerState((prevState) => {
+            return {
+                ...prevState,
+                mode: newMode,
+            }
+        })
+    }
+
+
     return {
         ...pickerContextValue,
         updatePickerDay,
         updatePickerMonth,
         togglePickerMode,
+        updatePickerMode,
     };
 }
 
