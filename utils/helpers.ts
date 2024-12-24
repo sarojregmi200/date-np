@@ -187,14 +187,13 @@ const getStartingDayOfMonth = ({ date: AD_date, locale }: tgetMonthTotalDaysProp
 
     const BS_date = convertFromADToBS(AD_date);
     BS_date.setDate(1)
-    const test = convertFromBSToAD(BS_date);
-    console.log({ test, BS_date, AD_date })
+    const thisBSMonthADdate = convertFromBSToAD(BS_date);
 
     const isvalid = isValidBSYear(BS_date);
     if (!isvalid)
         throw Errors.INVALID_BS_YEAR;
 
-    return (test).getDay();
+    return (thisBSMonthADdate).getDay();
 };
 
 export {
