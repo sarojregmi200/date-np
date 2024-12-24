@@ -122,7 +122,6 @@ const PickerBody = () => {
 
         const minYear = pickerState.locale === "en" ? MIN_AD_YEAR : MIN_BS_YEAR;
         const maxYear = pickerState.locale === "en" ? MAX_AD_YEAR : MAX_BS_YEAR;
-        const currentYear = pickerState.activeYear;
 
         const handleYearChange = (year: number) => {
             // changing the year

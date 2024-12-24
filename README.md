@@ -26,16 +26,20 @@ This project is still in it's early stages it's a work in progress.
     - [x] For publishing to jsr Not going this route 
 - [x] Setting up test cases for conversion functions.
 - [x] Writing basic conversion functions and making nepali date work.
-    - [ ] Conversion from AD to BS date. 
+    - [x] Conversion from AD to BS date. 
+    - [x] Conversion from BS to AD date.
 - [x] Add tests.
-- [ ] Date picker.
+- [x] Date picker. (AD)
     - [x] month switching. 
     - [x] selection of date. 
     - [x] month selection. 
-    - [ ] year selection.
+    - [x] year selection.
 - [ ] Creating path aliases.
-- [ ] Deciding on using date-fns or using custom functions.
+- [x] Deciding on using date-fns or using custom functions. we are not going to use it.
+      we will take inspiration but won't use it.
+- [ ] Fixing and making the styles expandable and customizable.
 - [ ] Fixing the scripts naming convention and scripts.
+- [ ] Making error handling better. 
 - [ ] Fixing the auto generated docs.
 - [ ] Making the exports good and publishing to jsr.
 - [ ] Publishing to npm.

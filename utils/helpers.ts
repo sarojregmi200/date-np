@@ -69,8 +69,8 @@ const calcTotalDaysInBSYear = (year: yearInput): number => {
 
 const addDaysToMinBSDate = (days: number): Date => {
     let BS_year = MIN_BS_YEAR as BS_MONTHS_KEYS;
-    let BS_month = 8;
-    let BS_day = 17;
+    let BS_month = 9;
+    let BS_day = 16;
     let month_end = BS_MONTHS[BS_year][BS_month];
 
     for (let i = 0; i < days; i++) {
@@ -78,7 +78,7 @@ const addDaysToMinBSDate = (days: number): Date => {
         if (BS_day <= month_end)
             continue;
 
-        if (BS_month != 12) {
+        if (BS_month != 11) {
             BS_month++;
         } else {
             BS_month = 0;

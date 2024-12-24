@@ -1,8 +1,3 @@
-/**
- * converts the given date from AD to BS
- * @returns {Date}
- */
-
 import { MIN_AD_YEAR } from "../data/constants";
 import Errors from "./Errors";
 import { addDaysToMinBSDate, calcTotalDaysFromMinAD, calcTotalDaysFromMinBS } from "./helpers";
@@ -29,7 +24,6 @@ const convertFromADToBS = (date: Date) => {
 
     return BS_date
 };
-
 
 export {
     convertFromADToBS,
