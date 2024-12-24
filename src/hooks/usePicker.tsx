@@ -73,6 +73,15 @@ const usePicker = () => {
         })
     }
 
+    const updatePickerYear = (newYear: tpickerContextType["pickerState"]["activeYear"]) => {
+        setPickerState((prevState) => {
+            return {
+                ...prevState,
+                activeYear: newYear,
+            }
+        })
+    }
+
 
     return {
         ...pickerContextValue,
@@ -80,6 +89,7 @@ const usePicker = () => {
         updatePickerMonth,
         togglePickerMode,
         updatePickerMode,
+        updatePickerYear,
     };
 }
 

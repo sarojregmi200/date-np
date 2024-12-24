@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+import { MAX_AD_YEAR, MAX_BS_YEAR, MIN_AD_YEAR, MIN_BS_YEAR } from "../../data/constants";
 import { CALENDAR } from "../../data/locale";
 import { cn } from "../../utils/clsx";
 import {
@@ -11,7 +13,7 @@ import Month from "./month";
 import { WeekRow } from "./week-row";
 
 const PickerBody = () => {
-    const { pickerState, updatePickerMonth, updatePickerMode } = usePicker();
+    const { pickerState, updatePickerMonth, updatePickerMode, updatePickerYear } = usePicker();
     const { today, activeDate, activeYear, activeMonth, locale } = pickerState;
 
     const thisMonthtotalDays = getTotalDaysInMonth({ date: new Date(activeYear, activeMonth, activeDate.getDate()), locale });
@@ -118,11 +120,48 @@ const PickerBody = () => {
         if (pickerState.mode !== "year")
             return null
 
-        return "Year Picker"
+        const minYear = pickerState.locale === "en" ? MIN_AD_YEAR : MIN_BS_YEAR;
+        const maxYear = pickerState.locale === "en" ? MAX_AD_YEAR : MAX_BS_YEAR;
+        const currentYear = pickerState.activeYear;
+
+        const handleYearChange = (year: number) => {
+            // changing the year
+            updatePickerYear(year);
+
+            // changing the mode to date
+            updatePickerMode("month");
+        }
+
+        const yearsOptions: ReactNode[] = [];
+        for (let i = minYear; i <= maxYear; i++) {
+            const element = (
+                <button
+                    key={i}
+                    tabIndex={0}
+                    className={cn(
+                        "flex items-center justify-center text-sm rounded-sm px-2 bg-gray-50 h-10 cursor-pointer",
+                        "hover:bg-gray-100",
+                        i === activeYear && "bg-gray-900 text-white hover:bg-gray-800",
+                    )}
+                    onClick={() => handleYearChange(i)}
+                >
+                    {i}
+                </button>
+            )
+
+            yearsOptions.push(element);
+        }
+
+        return (
+            <div className="grid grid-cols-3 gap-1 items-center w-full h-72 text-sm font-light">
+                {yearsOptions}
+            </div>
+        )
+
     }
 
     return (
-        <div className="flex items-center justify-between w-full min-h-72">
+        <div className="flex items-center justify-between w-full min-h-72 overflow-auto">
             <DatePickerBody />
             <MonthPickerBody />
             <YearPickerBody />

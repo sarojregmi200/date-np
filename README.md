@@ -41,3 +41,4 @@ This project is still in it's early stages it's a work in progress.
 - [ ] Publishing to npm.
 - [ ] Creating a good enough landing page and hosting it on github pages.
 - [ ] Creating contributing guidelines and design guidelines. 
+- [ ] Creating a custom scrollbar.
