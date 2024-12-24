@@ -1,19 +1,22 @@
 import { CALENDAR } from "../../data/locale";
+import { cn } from "../../utils/clsx";
+import { convertFromADToBS } from "../../utils/conversion";
 import { usePicker } from "../hooks/usePicker";
 
 const PickerHeader = () => {
-    const { pickerState, updatePickerMonth, togglePickerMode } = usePicker();
+    const { pickerState, updatePickerMonth, togglePickerMode, changePickerLocale } = usePicker();
     const { activeMonth, activeDate, activeYear, locale } = pickerState;
 
     const currentDate = new Date(activeYear, activeMonth, activeDate.getDate());
+    const currentNepaliDate = convertFromADToBS(currentDate);
 
     const month = locale === "en"
         ? CALENDAR.AD.months[currentDate.getMonth()]
-        : CALENDAR.BS.months[currentDate.getMonth()];
+        : CALENDAR.BS.months[currentNepaliDate.getMonth()];
 
     const year = locale === "en"
         ? currentDate.getFullYear()
-        : "NP"
+        : currentNepaliDate.getFullYear()
 
     const handleMonthChange = (changeDirection: "next" | "previous") => {
         const newMonth = changeDirection === "next"
@@ -47,6 +50,32 @@ const PickerHeader = () => {
                     {year}
                 </span>
             </div>
+
+            <div className="flex items-center bg-gray-100 rounded-md h-6 w-16 text-sm">
+                <span
+                    onClick={() => { changePickerLocale("en") }}
+                    className={cn(
+                        "cursor-pointer h-8 w-8 grid place-items-center  rounded-md",
+                        locale === "en"
+                            ? "bg-white drop-shadow-sm"
+                            : "bg-transparent opacity-60"
+                    )}>
+                    AD
+                </span>
+
+                <span
+                    onClick={() => { changePickerLocale("ne") }}
+                    className={cn(
+                        "cursor-pointer h-8 w-8 grid place-items-center  rounded-md",
+                        locale === "ne"
+                            ? "bg-white drop-shadow-sm"
+                            : "bg-transparent opacity-60"
+                    )}>
+                    BS
+                </span>
+
+            </div>
+
             <div
                 className="right h-8 w-8 rounded-sm cursor-pointer hover:bg-gray-200 flex items-center justify-center"
                 onClick={() => handleMonthChange("next")}

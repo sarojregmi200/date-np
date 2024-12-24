@@ -1,7 +1,7 @@
 # date-np
 Simple & minimal Nepali date picker that just works.
 
-> ## Back story:
+> # Back story:
 > Why create this package?
 > Because I was looking for a simple & minimal Nepali date picker that just works.
 > Found some but either they were bit qworky had bugs or they were not maintained.
@@ -19,7 +19,7 @@ bunx jsr add @bright/date-np
 npx jsr install @bright/date-np
 ```
 
-# TODO: 
+ TODO: 
 This project is still in it's early stages it's a work in progress.
 - [x] Add docs 
     - [x] For documentation 
@@ -34,6 +34,7 @@ This project is still in it's early stages it's a work in progress.
     - [x] selection of date. 
     - [x] month selection. 
     - [x] year selection.
+- [ ] Date Picker (BS).
 - [ ] Creating path aliases.
 - [x] Deciding on using date-fns or using custom functions. we are not going to use it.
       we will take inspiration but won't use it.

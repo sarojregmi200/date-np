@@ -1,6 +1,7 @@
 import { AD_MONTH, AD_MONTH_LEAP_YEAR, BS_MONTHS, MAX_BS_YEAR, MIN_AD_YEAR, MIN_BS_YEAR, type BS_MONTHS_KEYS } from "../data/constants.ts";
+import { convertFromADToBS, convertFromBSToAD } from "./conversion.ts";
 import Errors from "./Errors.ts";
-import { isADLeapYear, isValidADYear, isValidBSYear } from "./validators.ts";
+import { isADLeapYear, isValidADYear, isValidBSRange, isValidBSYear } from "./validators.ts";
 
 /**
  * @category helpers
@@ -40,9 +41,9 @@ const calcTotalDaysFromMinBS = (BS_date: Date): number => {
 
     // This is a temporary fix to account for the fact
     // that 1944 1 1 starts at nepali date 2000 09 17 hence
-    // the day till poush and 16 are added and subtracted from the total days
+    // the day till poush and 17 are added and subtracted from the total days
     // TODO: Fix this properly
-    return totalDays - (275 + 16);
+    return totalDays - (275 + 18);
 }
 
 /**
@@ -69,8 +70,9 @@ const calcTotalDaysInBSYear = (year: yearInput): number => {
 
 const addDaysToMinBSDate = (days: number): Date => {
     let BS_year = MIN_BS_YEAR as BS_MONTHS_KEYS;
+    // TODO: Research why this works.
     let BS_month = 9;
-    let BS_day = 16;
+    let BS_day = 18;
     let month_end = BS_MONTHS[BS_year][BS_month];
 
     for (let i = 0; i < days; i++) {
@@ -153,39 +155,46 @@ export type tgetMonthTotalDaysProps = {
     locale: "en" | "ne",
 }
 
-const getTotalDaysInMonth = ({ date, locale }: tgetMonthTotalDaysProps) => {
+/**
+ * This function assums that you send date as AD.
+ */
+const getTotalDaysInMonth = ({ date: AD_date, locale }: tgetMonthTotalDaysProps) => {
     if (locale === "en") {
-        const isValid = isValidADYear(date);
+        const isValid = isValidADYear(AD_date);
         if (!isValid)
             throw Errors.INVALID_AD_YEAR;
 
-        const isLeapYear = isADLeapYear(date);
-        return isLeapYear ? AD_MONTH_LEAP_YEAR[date.getMonth()] : AD_MONTH[date.getMonth()];
+        const isLeapYear = isADLeapYear(AD_date);
+        return isLeapYear ? AD_MONTH_LEAP_YEAR[AD_date.getMonth()] : AD_MONTH[AD_date.getMonth()];
     }
 
-    const isvalid = isValidBSYear(date);
+    const BS_date = convertFromADToBS(AD_date);
+    const isvalid = isValidBSRange(BS_date);
     if (!isvalid)
         throw Errors.INVALID_BS_YEAR;
 
-    return BS_MONTHS[date.getFullYear() as BS_MONTHS_KEYS][date.getMonth()];
+    return BS_MONTHS[BS_date.getFullYear() as BS_MONTHS_KEYS][BS_date.getMonth()];
 };
 
-const getStartingDayOfMonth = ({ date, locale }: tgetMonthTotalDaysProps) => {
+const getStartingDayOfMonth = ({ date: AD_date, locale }: tgetMonthTotalDaysProps) => {
     if (locale === "en") {
-        const isValid = isValidADYear(date);
+        const isValid = isValidADYear(AD_date);
         if (!isValid)
             throw Errors.INVALID_AD_YEAR;
 
-        return (new Date(date.getFullYear(), date.getMonth(), 1).getDay());
+        return (new Date(AD_date.getFullYear(), AD_date.getMonth(), 1).getDay());
     }
 
-    // TODO: See how can i get the starting day of the month.
-    // future note: converting and using JS date obj can be a good idea. 
-    const isvalid = isValidBSYear(date);
+    const BS_date = convertFromADToBS(AD_date);
+    BS_date.setDate(1)
+    const test = convertFromBSToAD(BS_date);
+    console.log({ test, BS_date, AD_date })
+
+    const isvalid = isValidBSYear(BS_date);
     if (!isvalid)
         throw Errors.INVALID_BS_YEAR;
 
-    return BS_MONTHS[date.getFullYear() as BS_MONTHS_KEYS][date.getMonth()];
+    return (test).getDay();
 };
 
 export {

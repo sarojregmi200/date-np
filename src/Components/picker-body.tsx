@@ -156,7 +156,6 @@ const PickerBody = () => {
                 {yearsOptions}
             </div>
         )
-
     }
 
     return (

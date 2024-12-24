@@ -82,6 +82,15 @@ const usePicker = () => {
         })
     }
 
+    const changePickerLocale = (newLocale: "en" | "ne") => {
+        setPickerState((prevState) => {
+            return {
+                ...prevState,
+                locale: newLocale,
+            }
+        })
+    }
+
 
     return {
         ...pickerContextValue,
@@ -90,6 +99,7 @@ const usePicker = () => {
         togglePickerMode,
         updatePickerMode,
         updatePickerYear,
+        changePickerLocale,
     };
 }
 
