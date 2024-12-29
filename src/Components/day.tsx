@@ -22,7 +22,7 @@ const Day = (props: tdayProps) => {
 
 
     const { updatePickerDay, pickerState, updatePickerMonth } = usePicker();
-    const { activeDate, activeMonth, activeYear } = pickerState;
+    const { selectedDate: activeDate, activeMonth, activeYear } = pickerState;
     const isActive = areDatesEqual(date, activeDate);
 
     const handlDayClick = (e: MouseEvent<HTMLButtonElement>) => {

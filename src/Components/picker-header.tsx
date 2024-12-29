@@ -5,12 +5,14 @@ import { usePicker } from "../hooks/usePicker";
 
 const PickerHeader = () => {
     const { pickerState, updatePickerMonth, togglePickerMode, changePickerLocale } = usePicker();
-    const { activeMonth, activeDate, activeYear, locale } = pickerState;
+    const { activeMonth, selectedDate: activeDate, activeYear, locale } = pickerState;
 
     const currentDate = new Date(activeYear, activeMonth, activeDate.getDate());
-    const currentNepaliDate = convertFromADToBS(currentDate);
+    const currentNepaliDate = pickerState.locale === "ne"
+        ? currentDate
+        : convertFromADToBS(currentDate);
 
-    const month = locale === "en"
+    const monthName = locale === "en"
         ? CALENDAR.AD.months[currentDate.getMonth()]
         : CALENDAR.BS.months[currentNepaliDate.getMonth()];
 
@@ -44,7 +46,7 @@ const PickerHeader = () => {
             </div>
             <div className="wrapper space-x-2 cursor-pointer">
                 <span onClick={handleMonthClick} className="hover:underline">
-                    {month?.EN}
+                    {monthName?.EN}
                 </span>
                 <span onClick={handleYearClick} className="hover:underline">
                     {year}

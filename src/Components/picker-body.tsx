@@ -14,7 +14,7 @@ import { WeekRow } from "./week-row";
 
 const PickerBody = () => {
     const { pickerState, updatePickerMonth, updatePickerMode, updatePickerYear } = usePicker();
-    const { today, activeDate, activeYear, activeMonth, locale } = pickerState;
+    const { today, selectedDate: activeDate, activeYear, activeMonth, locale } = pickerState;
 
     const thisMonthtotalDays = getTotalDaysInMonth({ date: new Date(activeYear, activeMonth, activeDate.getDate()), locale });
     const thisMonthStartDay = getStartingDayOfMonth({ date: new Date(activeYear, activeMonth, activeDate.getDate()), locale });

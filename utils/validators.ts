@@ -1,4 +1,12 @@
-import { MIN_BS_YEAR, MIN_AD_YEAR, type BS_MONTHS_KEYS, AD_MONTH, AD_MONTH_LEAP_YEAR, BS_MONTHS, MAX_BS_YEAR } from "../data/constants";
+import {
+    MIN_BS_YEAR,
+    MIN_AD_YEAR,
+    type BS_MONTHS_KEYS,
+    AD_MONTH,
+    AD_MONTH_LEAP_YEAR,
+    BS_MONTHS,
+    MAX_BS_YEAR
+} from "../data/constants";
 import { extractYear, type yearInput } from "./helpers";
 
 /**
@@ -81,10 +89,10 @@ const isValidBSRange = (BS_date: Date): boolean => {
     if (month < 0 || month > 11)
         return false;
 
-    if (day < 1 || day > BS_MONTHS[year as BS_MONTHS_KEYS][month])
+    if (year < MIN_BS_YEAR || year > MAX_BS_YEAR)
         return false;
 
-    if (year < MIN_BS_YEAR || year > MAX_BS_YEAR)
+    if (day < 1 || day > BS_MONTHS[year as BS_MONTHS_KEYS][month])
         return false;
 
     if (year === MIN_BS_YEAR && month === 8 && day < 17)
@@ -118,5 +126,4 @@ export {
     isValidADRange,
     isValidBSRange,
     areDatesEqual
-
 }

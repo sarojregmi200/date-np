@@ -1,12 +1,25 @@
 import { createContext, useContext, useState, type Dispatch, type SetStateAction } from "react";
+import { convertFromADToBS, convertFromBSToAD } from "../../utils/conversion";
 
 type tpickerContextType = {
     pickerState: {
         today: Date;
         isActive: boolean;
         locale: "en" | "ne";
-        activeDate: Date,
+        /**
+         * The Date that is selected
+         * @default today
+         */
+        selectedDate: Date,
+        /**
+         * Month that is currently in view,
+         * not always the selected Date's month.
+         */
         activeMonth: number,
+        /**
+         * Year that is in view not always the selected 
+         * year's month.
+         */
         activeYear: number,
         mode: "date" | "month" | "year",
     };
@@ -27,7 +40,7 @@ const usePicker = () => {
         setPickerState((prevState) => {
             return {
                 ...prevState,
-                activeDate: day,
+                selectedDate: day,
             }
         })
     }
@@ -84,8 +97,19 @@ const usePicker = () => {
 
     const changePickerLocale = (newLocale: "en" | "ne") => {
         setPickerState((prevState) => {
+            const selectedDate = prevState.selectedDate;
+            const convertedBS_date = convertFromADToBS(selectedDate);
+            const convertedAD_date = convertFromBSToAD(selectedDate);
+
+            const updatedDate = newLocale === "ne"
+                ? convertedBS_date
+                : convertedAD_date;
+
             return {
                 ...prevState,
+                activeMonth: updatedDate.getMonth(),
+                activeYear: updatedDate.getFullYear(),
+                selectedDate: updatedDate,
                 locale: newLocale,
             }
         })
@@ -107,7 +131,7 @@ const PickerProvider = ({ children }: { children: React.ReactNode }) => {
     const today = new Date();
     const [pickerState, setPickerState] = useState<tpickerContextType["pickerState"]>({
         today: today,
-        activeDate: today,
+        selectedDate: today,
         activeMonth: today.getMonth(),
         activeYear: today.getFullYear(),
         isActive: true,

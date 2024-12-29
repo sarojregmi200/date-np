@@ -87,6 +87,10 @@ const addDaysToMinBSDate = (days: number): Date => {
             BS_year++;
         }
 
+        if (BS_year > MAX_BS_YEAR) {
+            break;
+        }
+
         month_end = BS_MONTHS[BS_year as BS_MONTHS_KEYS][BS_month];
         BS_day = 1;
     }
@@ -156,40 +160,41 @@ export type tgetMonthTotalDaysProps = {
 }
 
 /**
- * This function assums that you send date as AD.
+ * This function assums you send date according to the locale 
  */
-const getTotalDaysInMonth = ({ date: AD_date, locale }: tgetMonthTotalDaysProps) => {
+const getTotalDaysInMonth = ({ date, locale }: tgetMonthTotalDaysProps) => {
     if (locale === "en") {
-        const isValid = isValidADYear(AD_date);
+        const isValid = isValidADYear(date);
         if (!isValid)
             throw Errors.INVALID_AD_YEAR;
 
-        const isLeapYear = isADLeapYear(AD_date);
-        return isLeapYear ? AD_MONTH_LEAP_YEAR[AD_date.getMonth()] : AD_MONTH[AD_date.getMonth()];
+        const isLeapYear = isADLeapYear(date);
+        return isLeapYear ? AD_MONTH_LEAP_YEAR[date.getMonth()] : AD_MONTH[date.getMonth()];
     }
 
-    const BS_date = convertFromADToBS(AD_date);
-    const isvalid = isValidBSRange(BS_date);
+    const isvalid = isValidBSRange(date);
     if (!isvalid)
         throw Errors.INVALID_BS_YEAR;
 
-    return BS_MONTHS[BS_date.getFullYear() as BS_MONTHS_KEYS][BS_date.getMonth()];
+    return BS_MONTHS[date.getFullYear() as BS_MONTHS_KEYS][date.getMonth()];
 };
 
-const getStartingDayOfMonth = ({ date: AD_date, locale }: tgetMonthTotalDaysProps) => {
+/**
+ * This function accepts date in locale range.
+ */
+const getStartingDayOfMonth = ({ date, locale }: tgetMonthTotalDaysProps) => {
     if (locale === "en") {
-        const isValid = isValidADYear(AD_date);
+        const isValid = isValidADYear(date);
         if (!isValid)
             throw Errors.INVALID_AD_YEAR;
 
-        return (new Date(AD_date.getFullYear(), AD_date.getMonth(), 1).getDay());
+        return (new Date(date.getFullYear(), date.getMonth(), 1).getDay());
     }
 
-    const BS_date = convertFromADToBS(AD_date);
-    BS_date.setDate(1)
-    const thisBSMonthADdate = convertFromBSToAD(BS_date);
+    date.setDate(1)
+    const thisBSMonthADdate = convertFromBSToAD(date);
 
-    const isvalid = isValidBSYear(BS_date);
+    const isvalid = isValidBSYear(date);
     if (!isvalid)
         throw Errors.INVALID_BS_YEAR;
 
