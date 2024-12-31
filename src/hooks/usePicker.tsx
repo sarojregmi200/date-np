@@ -97,13 +97,14 @@ const usePicker = () => {
 
     const changePickerLocale = (newLocale: "en" | "ne") => {
         setPickerState((prevState) => {
+            if (prevState.locale === newLocale)
+                return prevState;
+
             const selectedDate = prevState.selectedDate;
-            const convertedBS_date = convertFromADToBS(selectedDate);
-            const convertedAD_date = convertFromBSToAD(selectedDate);
 
             const updatedDate = newLocale === "ne"
-                ? convertedBS_date
-                : convertedAD_date;
+                ? convertFromADToBS(selectedDate)
+                : convertFromBSToAD(selectedDate);
 
             return {
                 ...prevState,
@@ -114,7 +115,6 @@ const usePicker = () => {
             }
         })
     }
-
 
     return {
         ...pickerContextValue,
