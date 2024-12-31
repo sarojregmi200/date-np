@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { useMemo, type ReactNode } from "react";
 import { CALENDAR } from "../../data/locale";
 import { cn } from "../../utils/clsx";
 import { convertFromADToBS } from "../../utils/conversion";
@@ -6,21 +6,28 @@ import { usePicker } from "../hooks/usePicker";
 
 const PickerHeader = () => {
     const { pickerState, togglePickerMode } = usePicker();
-    const { activeMonth, selectedDate: activeDate, activeYear, locale } = pickerState;
+    const { activeMonth, selectedDate, activeYear, locale } = pickerState;
 
-    const currentDate = new Date(activeYear, activeMonth, activeDate.getDate());
+    // We are going with current Month middle date 
+    // since it is possible that the month we are viewing
+    // may have more days than the previous or next month, which will
+    // change the month but when the currentDate is calculated with
+    // activeyear, activemonth, selectedDate.getDate() it will be the same.
+    const currentMonthMiddle = useMemo(
+        () => new Date(activeYear, activeMonth, (selectedDate.getDate() / 2)),
+        [activeYear, activeMonth, selectedDate]);
+
     const currentNepaliDate = pickerState.locale === "ne"
-        ? currentDate
-        : convertFromADToBS(currentDate);
+        ? currentMonthMiddle
+        : convertFromADToBS(currentMonthMiddle);
 
     const monthName = locale === "en"
-        ? CALENDAR.AD.months[currentDate.getMonth()]
+        ? CALENDAR.AD.months[currentMonthMiddle.getMonth()]
         : CALENDAR.BS.months[currentNepaliDate.getMonth()];
 
     const year = locale === "en"
-        ? currentDate.getFullYear()
+        ? currentMonthMiddle.getFullYear()
         : currentNepaliDate.getFullYear()
-
 
     const handleMonthClick = () => {
         togglePickerMode("month", "date");
@@ -58,6 +65,7 @@ const monthSwitcher = (): {
         const newMonth = changeDirection === "next"
             ? activeMonth + 1
             : activeMonth - 1;
+
         updatePickerMonth(newMonth);
     }
 

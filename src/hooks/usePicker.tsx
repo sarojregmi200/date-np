@@ -50,7 +50,7 @@ const usePicker = () => {
         let monthOffset = 0;
         if (month > 11) {
             yearOffset = Math.floor(month / 11);
-            monthOffset = month % 11 - 1;
+            monthOffset = (month % 11) - 1;
         } else {
             monthOffset = month;
         }

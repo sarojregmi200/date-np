@@ -14,18 +14,18 @@ import { WeekRow } from "./week-row";
 
 const PickerBody = () => {
     const { pickerState, updatePickerMonth, updatePickerMode, updatePickerYear } = usePicker();
-    const { today, selectedDate: activeDate, activeYear, activeMonth, locale } = pickerState;
+    const { today, selectedDate, activeYear, activeMonth, locale } = pickerState;
 
-    const thisMonthtotalDays = getTotalDaysInMonth({ date: new Date(activeYear, activeMonth, activeDate.getDate()), locale });
-    const thisMonthStartDay = getStartingDayOfMonth({ date: new Date(activeYear, activeMonth, activeDate.getDate()), locale });
-    const prevMonthTotalDays = getTotalDaysInMonth({ date: new Date(activeYear, activeMonth - 1, activeDate.getDate()), locale });
+    const thisMonthtotalDays = getTotalDaysInMonth({ date: new Date(activeYear, activeMonth, 1), locale });
+    const thisMonthStartDay = getStartingDayOfMonth({ date: new Date(activeYear, activeMonth, 1), locale });
+    const prevMonthTotalDays = getTotalDaysInMonth({ date: new Date(activeYear, activeMonth - 1, 1), locale });
 
     const plotablePrevMonthDays = thisMonthStartDay;
 
     const TrailingPrevMonthDays = () => {
         return [...Array(plotablePrevMonthDays)].map((_, index) => {
             const date = prevMonthTotalDays - (plotablePrevMonthDays - (index + 1));
-            const isNotActive = !areDatesEqual(new Date(activeYear, activeMonth - 1, date), activeDate);
+            const isNotActive = !areDatesEqual(new Date(activeYear, activeMonth - 1, date), selectedDate);
 
             return <Day
                 date={new Date(activeYear, activeMonth - 1, date)}
@@ -49,7 +49,7 @@ const PickerBody = () => {
         const PrecidingDays = 7 - lastDateDay;
 
         return [...Array(PrecidingDays)].map((_, index) => {
-            const isNotActive = !areDatesEqual(new Date(activeYear, activeMonth - 1, index + 1), activeDate);
+            const isNotActive = !areDatesEqual(new Date(activeYear, activeMonth - 1, index + 1), selectedDate);
 
             return <Day
                 date={new Date(activeYear, activeMonth + 1, index + 1)}

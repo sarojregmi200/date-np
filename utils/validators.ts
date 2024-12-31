@@ -86,8 +86,6 @@ const isValidBSRange = (BS_date: Date): boolean => {
     const month = BS_date.getMonth();
     const day = BS_date.getDate();
 
-    console.log({ year, month, day })
-
     if (month < 0 || month > 11)
         return false;
 
