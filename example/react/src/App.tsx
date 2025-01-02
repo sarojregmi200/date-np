@@ -7,6 +7,7 @@ function App() {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            backgroundImage: "linear-gradient(#fff, #e8e8e8)"
         }}>
             <Picker />
         </div>

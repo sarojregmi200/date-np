@@ -3,6 +3,7 @@ import { MAX_AD_YEAR, MAX_BS_YEAR, MIN_AD_YEAR, MIN_BS_YEAR } from "../../data/c
 import { CALENDAR } from "../../data/locale";
 import { cn } from "../../utils/clsx";
 import {
+    getEndingDayOfMonth,
     getStartingDayOfMonth,
     getTotalDaysInMonth
 } from "../../utils/helpers";
@@ -18,6 +19,7 @@ const PickerBody = () => {
 
     const thisMonthtotalDays = getTotalDaysInMonth({ date: new Date(activeYear, activeMonth, 1), locale });
     const thisMonthStartDay = getStartingDayOfMonth({ date: new Date(activeYear, activeMonth, 1), locale });
+    const thisMonthEndDay = getEndingDayOfMonth({ date: new Date(activeYear, activeMonth, thisMonthtotalDays), locale })
     const prevMonthTotalDays = getTotalDaysInMonth({ date: new Date(activeYear, activeMonth - 1, 1), locale });
 
     const plotablePrevMonthDays = thisMonthStartDay;
@@ -38,6 +40,8 @@ const PickerBody = () => {
     const ThisMonthDays = () => {
         return [...Array(thisMonthtotalDays)].map((_, index) => {
             return <Day
+                // TODO: Extend the date with custom class so that it doesnot
+                // round off when in Nepali Date 
                 date={new Date(activeYear, activeMonth, index + 1)}
                 key={index}
             />
@@ -45,8 +49,8 @@ const PickerBody = () => {
     }
 
     const PrecidingNxtMonthDays = () => {
-        const lastDateDay = new Date(activeYear, activeMonth, thisMonthtotalDays).getDay() + 1;
-        const PrecidingDays = 7 - lastDateDay;
+        const PrecidingDays = 6 - thisMonthEndDay;
+        console.log({ PrecidingDays });
 
         return [...Array(PrecidingDays)].map((_, index) => {
             const isNotActive = !areDatesEqual(new Date(activeYear, activeMonth - 1, index + 1), selectedDate);
@@ -83,9 +87,9 @@ const PickerBody = () => {
         let monthsNames: string[] = [];
         if (pickerState.locale === "en") {
             // TODO: Add support for translation and language.
-            monthsNames = Object.values(CALENDAR.AD.months).map(month => month.EN);
+            monthsNames = Object.values(CALENDAR.AD.months).map(month => month);
         } else {
-            monthsNames = Object.values(CALENDAR.BS.months).map(month => month.EN);
+            monthsNames = Object.values(CALENDAR.BS.months).map(month => month);
         }
 
         const handleMonthChange = (month: number) => {

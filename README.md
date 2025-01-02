@@ -34,7 +34,8 @@ This project is still in it's early stages it's a work in progress.
     - [x] selection of date. 
     - [x] month selection. 
     - [x] year selection.
-- [ ] Date Picker (BS).
+- [x] Date Picker (BS).
+- [ ] creating a input feild and using direction aware container for the picker.
 - [ ] Creating path aliases.
 - [x] Deciding on using date-fns or using custom functions. we are not going to use it.
       we will take inspiration but won't use it.

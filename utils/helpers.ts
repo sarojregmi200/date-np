@@ -181,6 +181,7 @@ const getTotalDaysInMonth = ({ date, locale }: tgetMonthTotalDaysProps) => {
 
 /**
  * This function accepts date in locale range.
+ * And gives the first day of the month in numeric form.
  */
 const getStartingDayOfMonth = ({ date, locale }: tgetMonthTotalDaysProps) => {
     if (locale === "en") {
@@ -201,6 +202,27 @@ const getStartingDayOfMonth = ({ date, locale }: tgetMonthTotalDaysProps) => {
     return (thisBSMonthADdate).getDay();
 };
 
+/**
+ * Calculates and returns the last day of the month according to the locale 
+ * provided
+ */
+const getEndingDayOfMonth = ({ date, locale }: tgetMonthTotalDaysProps) => {
+    if (locale === "en") {
+        const isValid = isValidADYear(date);
+        if (!isValid)
+            throw Errors.INVALID_AD_YEAR;
+
+        return date.getDay();
+    }
+
+    const thisBSMonthADdate = convertFromBSToAD(date);
+    const isvalid = isValidBSYear(date);
+    if (!isvalid)
+        throw Errors.INVALID_BS_YEAR;
+
+    return (thisBSMonthADdate).getDay();
+};
+
 export {
     calcTotalDaysFromMinBS,
     calcTotalDaysInBSYear,
@@ -208,5 +230,6 @@ export {
     addDaysToMinBSDate,
     extractYear,
     getTotalDaysInMonth,
-    getStartingDayOfMonth
+    getStartingDayOfMonth,
+    getEndingDayOfMonth,
 } 
