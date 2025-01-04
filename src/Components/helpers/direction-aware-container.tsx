@@ -27,6 +27,9 @@ export type directionAwareContainerProps = {
     };
 })
 
+/**
+ * Borrowed from some of my old code will probably give a refactor before going public
+ */
 const DirectionAwareContainer = (props: directionAwareContainerProps) => {
     const directionOffset = props.offset || 10;
     const directionPriority = props.directionPriority ?? ["bottom", "right", "top", "left"];
