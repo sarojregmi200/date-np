@@ -35,7 +35,7 @@
     "watch:auto-gen-docs": "typedoc --watch",
     "preview:docs": "cd docs && bun run start",
     "dev:lib": "vite build --watch",
-    "build:lib": "vite build",
+    "build:lib": "vite build --mode release",
     "build:types": "tsc --emitDeclarationOnly",
     "dev:example": "cd example/react && bun run dev",
     "link": "bun link && cd example/react/ && bun link date-np",
