@@ -18,7 +18,7 @@ export type directionAwareContainerProps = {
     className?: string;
 } & ({
     activateWith: "ref";
-    activatorRef: React.RefObject<HTMLElement>;
+    activatorRef: React.RefObject<HTMLElement | null>;
 } | {
     activateWith: "position"
     activationPosition: {
