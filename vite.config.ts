@@ -24,7 +24,7 @@ export default defineConfig(({ mode }) => {
                 external: ['react', 'react-dom', 'react/jsx-runtime'],
                 output: {
                     intro: (chunk) => {
-                        if (chunk.fileName.includes('src/index.js')) {
+                        if (chunk.fileName.includes('src/picker.js')) {
                             return `import "../style.css";`
                         }
                         return ''

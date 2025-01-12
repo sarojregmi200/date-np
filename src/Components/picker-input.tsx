@@ -1,5 +1,7 @@
 import React from "react";
 import { cn } from "../../utils/clsx";
+import "../index.css";
+import { usePicker } from "../hooks/usePicker";
 
 type tpickerInputProps = {
     label?: string,
@@ -18,6 +20,8 @@ const PickerInput = React.forwardRef<tpickerInputImperativeProps, tpickerInputPr
         name,
         ...inputProps
     } = props;
+
+    const { updatePickerVisiblity } = usePicker();
 
     /*
      * This can be seperated into a seperate component but should not be done.
@@ -40,8 +44,7 @@ const PickerInput = React.forwardRef<tpickerInputImperativeProps, tpickerInputPr
     }
     const handleInputFocus = (e: React.FocusEvent<HTMLInputElement>) => {
         e.target.select();
-        // todo: Make picker active 
-
+        updatePickerVisiblity(true);
     }
 
     return (
@@ -51,8 +54,8 @@ const PickerInput = React.forwardRef<tpickerInputImperativeProps, tpickerInputPr
             <div
                 className={cn(
                     "border-2 border-b-base rounded-md px-2.5 py-1 group",
-                    "has-active:border-b-active",
-                    "focus-within:border-b-active",
+                    "has-active:border-b-active has-active:outline-none",
+                    "focus-within:border-b-active focus-within:outline-none focus-visible:outline-none has-focus-visible:outline-none",
                     className)
                 }>
                 <input

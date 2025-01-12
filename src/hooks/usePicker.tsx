@@ -4,7 +4,7 @@ import { convertFromADToBS, convertFromBSToAD } from "../../utils/conversion";
 type tpickerContextType = {
     pickerState: {
         today: Date;
-        isActive: boolean;
+        isVisible: boolean;
         locale: "en" | "ne";
         /**
          * The Date that is selected
@@ -62,6 +62,19 @@ const usePicker = () => {
                 activeMonth: monthOffset,
             }
         })
+    }
+
+    const updatePickerVisiblity = (newVis: boolean) => {
+        setPickerState((prevPickerState) => {
+            const wasVisible = prevPickerState.isVisible;
+            if (wasVisible === newVis)
+                return prevPickerState;
+
+            return {
+                ...prevPickerState,
+                isVisible: newVis,
+            }
+        });
     }
 
     /**
@@ -124,6 +137,7 @@ const usePicker = () => {
         updatePickerMode,
         updatePickerYear,
         changePickerLocale,
+        updatePickerVisiblity,
     };
 }
 
@@ -134,7 +148,7 @@ const PickerProvider = ({ children }: { children: React.ReactNode }) => {
         selectedDate: today,
         activeMonth: today.getMonth(),
         activeYear: today.getFullYear(),
-        isActive: true,
+        isVisible: false,
         locale: "en",
         mode: "date",
     });
