@@ -38,17 +38,32 @@ const PickerInput = React.forwardRef<tpickerInputImperativeProps, tpickerInputPr
                 </label>
             )
     }
+    const handleInputFocus = (e: React.FocusEvent<HTMLInputElement>) => {
+        e.target.select();
+        // todo: Make picker active 
+
+    }
 
     return (
         <div className="inputContainer">
             <Label />
-            <input
-                required={required}
-                ref={ref}
-                className={cn("", className)}
-                {...inputProps}
-            />
-        </div>
+
+            <div
+                className={cn(
+                    "border-2 border-b-base rounded-md px-2.5 py-1 group",
+                    "has-active:border-b-active",
+                    "focus-within:border-b-active",
+                    className)
+                }>
+                <input
+                    onFocus={handleInputFocus}
+                    required={required}
+                    ref={ref}
+                    className={cn("appearance-none")}
+                    {...inputProps}
+                />
+            </div>
+        </div >
     )
 })
 

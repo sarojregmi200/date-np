@@ -1,4 +1,4 @@
-import Picker from "date-np"
+import Picker from "date-np/picker";
 
 function App() {
     return (
