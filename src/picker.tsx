@@ -7,7 +7,7 @@ import PickerInput from "./Components/picker-input";
 import { PickerProvider, usePicker } from "./hooks/usePicker";
 import "./index.css";
 
-type tpropsWithoutInput = {
+type tpickerWithoutInput = {
     /**
      * Note:
      * You should have `shouldShowInput` set to true inorder to
@@ -17,12 +17,12 @@ type tpropsWithoutInput = {
     shouldShowInput?: false
 }
 
-type tpropsWithInput = {
+type tpickerWithInput = {
     /**
      * customize input with input specific props.
      * visit: #docs for more information on this.
      */
-    inputProps: ComponentProps<typeof PickerInput>
+    inputProps?: ComponentProps<typeof PickerInput>
 
     /**
      * Specify whethere to show the picker input or not
@@ -43,7 +43,7 @@ export type tpickerProps = {
     classNames?: {
     }
 
-} & (tpropsWithInput | tpropsWithoutInput);
+} & (tpickerWithInput | tpickerWithoutInput);
 
 const Picker = (props: tpickerProps) => {
     const {

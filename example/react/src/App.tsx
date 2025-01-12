@@ -9,7 +9,9 @@ function App() {
             alignItems: 'center',
             backgroundImage: "linear-gradient(#fff, #e8e8e8)"
         }}>
-            <Picker shouldShowInput />
+            <Picker
+                shouldShowInput={true}
+            />
         </div>
     )
 }
