@@ -1,10 +1,11 @@
-import { useRef, useState, type ComponentProps, type PropsWithoutRef } from "react";
+import { useRef, type ComponentProps } from "react";
 import { cn } from "../utils/clsx";
 import DirectionAwareContainer from "./Components/helpers/direction-aware-container";
 import PickerBody from "./Components/picker-body";
 import PickerHeader from "./Components/picker-header";
 import PickerInput from "./Components/picker-input";
 import { PickerProvider, usePicker } from "./hooks/usePicker";
+import { type tdirectionAwareContainerProps } from "./Components/helpers/direction-aware-container";
 import "./index.css";
 
 type tpickerWithoutInput = {
@@ -43,6 +44,11 @@ export type tpickerProps = {
     classNames?: {
     }
 
+    /**
+     * Control how and where you show the Picker container
+     */
+    dAwareConProps: tdirectionAwareContainerProps,
+
 } & (tpickerWithInput | tpickerWithoutInput);
 
 const Picker = (props: tpickerProps) => {
@@ -50,46 +56,49 @@ const Picker = (props: tpickerProps) => {
         shouldShowInput = true,
         className,
         inputProps: pickerInputProps = {},
+        dAwareConProps = {},
     } = props
 
-    const pickerInputRef = pickerInputProps?.ref ?? null;
+    const pickerInputRef = pickerInputProps?.ref ?? useRef<HTMLDivElement>(null);
 
     let PickerContent = () => {
-        const pickerState = usePicker().pickerState;
+        const { updatePickerVisiblity, pickerState } = usePicker();
         const shouldShowPicker = pickerState.isVisible;
 
-        if (shouldShowPicker)
-            return (
+        return (
+            <DirectionAwareContainer
+                direction="bottom"
+                activateWith="ref"
+                //@ts-ignore
+                activatorRef={pickerInputRef}
+                onOutsideClick={() => updatePickerVisiblity(false)}
+                active={shouldShowPicker}
+                {...dAwareConProps}
+            >
                 <div className={cn(
-                    "fixed flex flex-col gap-0.5 w-72 h-max bg-white drop-shadow-sm p-2.5 rounded-md",
+                    "flex flex-col gap-0.5 w-72 h-max bg-white drop-shadow-sm p-2.5 rounded-md",
                     className)}>
                     <PickerHeader />
                     <PickerBody />
                 </div>
-            )
-        return null;
+            </DirectionAwareContainer>
+        )
     }
-
     return (
         <PickerProvider>
             {shouldShowInput
-                ? <PickerInput ref={pickerInputRef} {...pickerInputProps} />
+                ? <PickerInput
+                    // @ts-ignore
+                    ref={pickerInputRef}
+                    {...pickerInputProps}
+                />
                 : null}
-
             <PickerContent />
         </PickerProvider>
     )
 }
 
-{/*
-const DirectionAwarePickerContent = () => {
-    return (
-        <DirectionAwareContainer
-            activateWith="ref"
-            activatorRef={pickerInputRef}
-            onOutsideClick={() => setShowPicker(false)}
-        />
-    )
-} */}
+
+
 
 export default Picker;

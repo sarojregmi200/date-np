@@ -50,7 +50,6 @@ const PickerBody = () => {
 
     const PrecidingNxtMonthDays = () => {
         const PrecidingDays = 6 - thisMonthEndDay;
-        console.log({ PrecidingDays });
 
         return [...Array(PrecidingDays)].map((_, index) => {
             const isNotActive = !areDatesEqual(new Date(activeYear, activeMonth - 1, index + 1), selectedDate);

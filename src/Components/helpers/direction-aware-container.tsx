@@ -3,15 +3,15 @@ import { cn } from '../../../utils/clsx.ts';
 import useOutsideClick from '../../hooks/useOutsideClick';
 import { createPortal } from 'react-dom';
 
-export type direction = "bottom" | "right" | "top" | "left"
-export type directionAwareContainerProps = {
+export type tdirection = "bottom" | "right" | "top" | "left"
+export type tdirectionAwareContainerProps = {
     children?: React.ReactNode;
-    direction?: direction;
+    direction?: tdirection;
     // defaults to 10
     offset?: number;
 
     /** deafult to ["bottom", "right", "top", "left"] */
-    directionPriority?: direction[];
+    directionPriority?: tdirection[];
     active?: boolean,
     onOutsideClick: () => void;
     centerAlignContainer?: boolean;
@@ -30,7 +30,7 @@ export type directionAwareContainerProps = {
 /**
  * Borrowed from some of my old code will probably give a refactor before going public
  */
-const DirectionAwareContainer = (props: directionAwareContainerProps) => {
+const DirectionAwareContainer = (props: tdirectionAwareContainerProps) => {
     const directionOffset = props.offset || 10;
     const directionPriority = props.directionPriority ?? ["bottom", "right", "top", "left"];
     const contentRef = useRef<HTMLDivElement | null>(null);
@@ -44,7 +44,7 @@ const DirectionAwareContainer = (props: directionAwareContainerProps) => {
         let currentPriorityIndex = -1;
 
         // calculates the position of the element and then returns the position of the container.
-        const calculatePosition = (direction: directionAwareContainerProps['direction']) => {
+        const calculatePosition = (direction: tdirectionAwareContainerProps['direction']) => {
             const contentElement = contentRef.current;
             const activatorElement = props.activateWith === "ref" && props?.activatorRef?.current;
 
@@ -137,17 +137,15 @@ const DirectionAwareContainer = (props: directionAwareContainerProps) => {
         active: props.active || false
     });
 
+    if (!props.active)
+        return null
+
     return createPortal(
         (<div
             ref={contentRef}
-            className={
-                cn(
-                    'bg-bg-base border border-outline-neutral rounded-md fixed top-0 left-0 z-50 opacity-0 translate-x-[50vw] translate-y-[50vh]',
-                    props.className,
-                    props.active ?
-                        "opacity-100 block" :
-                        "opacity-0 pointer-events-none hidden"
-                )} >
+            className={cn(
+                'rounded-md fixed top-1/2 left-1/2 z-50 -translate-x-1/2 -translate-y-1/2',
+                props.className)} >
             {props.children}
         </div>), document.body);
 };

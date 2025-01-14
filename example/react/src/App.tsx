@@ -11,6 +11,9 @@ function App() {
         }}>
             <Picker
                 shouldShowInput={true}
+                inputProps={{
+                    label: "Nepali Date",
+                }}
             />
         </div>
     )

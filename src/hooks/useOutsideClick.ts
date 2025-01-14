@@ -23,7 +23,7 @@ const useOutsideClick = (props: tuseOutsideClickProps) => {
     } = props;
 
     const onOutsideClick = (e: tcallbackEvent) => {
-        let isOutside = false;
+        let isInside = false;
         const containerElement = ref.current;
         if (!containerElement) {
             console.error("Falied to get the container from the ref");
@@ -36,8 +36,8 @@ const useOutsideClick = (props: tuseOutsideClickProps) => {
             return;
         }
 
-        isOutside = ref.current?.contains(currentTargetElement) || false;
-        if (isOutside) callback(e);
+        isInside = ref.current?.contains(currentTargetElement) || false;
+        if (!isInside) callback(e);
     };
 
     const removeEventListeners = () => {
@@ -46,12 +46,10 @@ const useOutsideClick = (props: tuseOutsideClickProps) => {
     }
 
     useEffect(() => {
-        if (!active) {
-            removeEventListeners();
+        if (active) {
+            document.addEventListener("touch", onOutsideClick);
+            document.addEventListener("click", onOutsideClick);
         }
-
-        document.addEventListener("touch", onOutsideClick);
-        document.addEventListener("click", onOutsideClick);
 
         return () => {
             removeEventListeners();
