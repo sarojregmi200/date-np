@@ -144,10 +144,12 @@ const DirectionAwareContainer = (props: tdirectionAwareContainerProps) => {
         (<div
             ref={contentRef}
             className={cn(
-                'rounded-md fixed top-1/2 left-1/2 z-50 -translate-x-1/2 -translate-y-1/2',
-                props.className)} >
+                props.className,
+                "fixed z-50 top-0 left-0"
+            )}>
             {props.children}
-        </div>), document.body);
+        </div>),
+        document.body);
 };
 
 export default DirectionAwareContainer;
