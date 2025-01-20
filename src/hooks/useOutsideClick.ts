@@ -40,21 +40,22 @@ const useOutsideClick = (props: tuseOutsideClickProps) => {
         if (!isInside) callback(e);
     };
 
-    const removeEventListeners = () => {
-        document.removeEventListener("touch", onOutsideClick);
-        document.removeEventListener("click", onOutsideClick);
-    }
-
     useEffect(() => {
+        const controller = new AbortController();
+
         if (active) {
-            document.addEventListener("touch", onOutsideClick);
-            document.addEventListener("click", onOutsideClick);
+            document.addEventListener("click", (e) => {
+                setTimeout(() => {
+                    onOutsideClick(e)
+                }, 0)
+            }
+                , { signal: controller.signal });
         }
 
         return () => {
-            removeEventListeners();
+            controller.abort();
         }
-    }, [active, removeEventListeners, onOutsideClick])
+    }, [active, onOutsideClick])
 
 }
 
