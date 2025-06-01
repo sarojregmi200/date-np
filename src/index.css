@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+/* Resetting the default browser behaviours*/
+input:focus {
+    outline: none;
+}
+
+@theme {
+    --color-b-active: blue;
+    --color-b-base: #a5a5a5;
+}

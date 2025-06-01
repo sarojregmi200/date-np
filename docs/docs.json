@@ -1,0 +1,190 @@
+{
+	"id": 42,
+	"name": "date-np",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 43,
+			"name": "src",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 46,
+					"name": "HelloAgain",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/index.tsx",
+							"line": 5,
+							"character": 6,
+							"url": "https://github.com/bright-office/date-np/blob/2f7cc2a65b07d7c054c49e16b92d2fc4b9189b9b/src/index.tsx#L5"
+						}
+					],
+					"signatures": [
+						{
+							"id": 47,
+							"name": "HelloAgain",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/index.tsx",
+									"line": 5,
+									"character": 19,
+									"url": "https://github.com/bright-office/date-np/blob/2f7cc2a65b07d7c054c49e16b92d2fc4b9189b9b/src/index.tsx#L5"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					]
+				},
+				{
+					"id": 44,
+					"name": "HelloCOMP",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/index.tsx",
+							"line": 1,
+							"character": 6,
+							"url": "https://github.com/bright-office/date-np/blob/2f7cc2a65b07d7c054c49e16b92d2fc4b9189b9b/src/index.tsx#L1"
+						}
+					],
+					"signatures": [
+						{
+							"id": 45,
+							"name": "HelloCOMP",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/index.tsx",
+									"line": 1,
+									"character": 18,
+									"url": "https://github.com/bright-office/date-np/blob/2f7cc2a65b07d7c054c49e16b92d2fc4b9189b9b/src/index.tsx#L1"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						46,
+						44
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "src/index.tsx",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/bright-office/date-np/blob/2f7cc2a65b07d7c054c49e16b92d2fc4b9189b9b/src/index.tsx#L1"
+				}
+			]
+		},
+		{
+			"id": 48,
+			"name": "utils",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "utils/index.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/bright-office/date-np/blob/2f7cc2a65b07d7c054c49e16b92d2fc4b9189b9b/utils/index.ts#L1"
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Modules",
+			"children": [
+				43,
+				48
+			]
+		}
+	],
+	"packageName": "date-np",
+	"readme": [
+		{
+			"kind": "text",
+			"text": "# date-np\nSimple & minimal Nepali date picker that just works.\n\n> ## Back story:\n> Why create this package?\n> Because I was looking for a simple & minimal Nepali date picker that just works.\n> Found some but either they were bit qworky had bugs or they were not maintained.\n> So I decided to create my own. \n> During my work at [Bright Software] (https://brightit.com.np)\n\n## Installation\n### bun:\n"
+		},
+		{
+			"kind": "code",
+			"text": "```bash\nbunx jsr add @bright/date-np\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n### npm:\n"
+		},
+		{
+			"kind": "code",
+			"text": "```bash\nnpx jsr install @bright/date-np\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\n\n# TODO: \nThis project is still in it's early stages it's a work in progress.\n- [x] Add docs \n    - [x] For documentation \n    - [x] For publishing to jsr Not going this route \n- [x] Setting up test cases for conversion functions.\n- [x] Writing basic conversion functions and making nepali date work.\n    - [ ] Conversion from AD to BS date. \n- [x] Add tests.\n\n- [ ] Deciding on using date-fns or using custom functions.\n- [ ] Fixing the scripts naming convention and scripts.\n- [ ] Fixing the auto generated docs.\n- [ ] Creating a picker for react. \n- [ ] Making the exports good and publishing to jsr.\n- [ ] Publishing to npm.\n- [ ] Creating a good enough landing page and hosting it on github pages.\n- [ ] Creating contributing guidelines and design guidelines."
+		}
+	],
+	"symbolIdMap": {
+		"43": {
+			"sourceFileName": "src/index.tsx",
+			"qualifiedName": ""
+		},
+		"44": {
+			"sourceFileName": "src/index.tsx",
+			"qualifiedName": "HelloCOMP"
+		},
+		"45": {
+			"sourceFileName": "src/index.tsx",
+			"qualifiedName": "HelloCOMP"
+		},
+		"46": {
+			"sourceFileName": "src/index.tsx",
+			"qualifiedName": "HelloAgain"
+		},
+		"47": {
+			"sourceFileName": "src/index.tsx",
+			"qualifiedName": "HelloAgain"
+		},
+		"48": {
+			"sourceFileName": "utils/index.ts",
+			"qualifiedName": ""
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "src/index.tsx",
+			"2": "utils/index.ts"
+		},
+		"reflections": {
+			"1": 43,
+			"2": 48
+		}
+	}
+}

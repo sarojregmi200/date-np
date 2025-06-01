@@ -1,0 +1,74 @@
+{
+  "name": "date-np",
+  "author": {
+    "name": "Saroj Regmi",
+    "url": "https://sarojregmi.sh"
+  },
+  "description": "Simple & minimal Nepali date picker that just works.",
+  "repository": {
+    "url": "https://github.com/sarojregmi200/date-np",
+    "type": "git"
+  },
+  "bugs": "https://github.com/sarojregmi200/date-np/issues",
+  "keywords": [
+    "react-date",
+    "date-picker",
+    "nepali-date-picker",
+    "nepali-date-picker-react",
+    "date-functions",
+    "date-functions-nepali"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/src/index.js",
+      "types": "./dist/types/src/index.d.ts"
+    },
+    "./picker": {
+        "import": "./dist/src/picker.js",
+        "types": "./dist/types/src/picker.d.ts"
+    }
+  },
+  "main": "./dist/src/index.js",
+  "types": "./dist/types/src/index.d.ts",
+  "type": "module",
+  "module": "./dist/src/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "watch:auto-gen-docs": "typedoc --watch",
+    "preview:docs": "cd docs && bun run start",
+    "dev:lib": "vite build --watch",
+    "build:lib": "vite build --mode release",
+    "build:types": "tsc --emitDeclarationOnly",
+    "dev:example": "cd example/react && bun run dev",
+    "link": "bun link && cd example/react/ && bun link date-np",
+    "dev": "concurrently \"bun run watch:auto-gen-docs\" \"bun run preview:docs\" \"bun run dev:lib\" \"bun run link && bun run dev:example\" -c \"green,blue,gray,white\" -n \"gen-docs,preview,library,example\"",
+    "test": "vitest",
+    "publish:docs": "typedoc && cd docs && bun run deploy"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@vitest/ui": "^2.1.8",
+    "clsx": "^2.1.1",
+    "concurrently": "^9.1.0",
+    "react": "^19.0.0",
+    "tailwind-merge": "^2.5.5",
+    "typedoc": "^0.27.5",
+    "typedoc-plugin-markdown": "^4.3.2",
+    "vite": "^5.4.11",
+    "vite-plugin-dts": "^4.4.0",
+    "vitest": "^2.1.8",
+    "@tailwindcss/vite": "^4.0.0-beta.8",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tailwindcss": "^4.0.0-beta.8"
+  },
+  "peerDependencies": {
+    "react": "17 || 18 || 19",
+    "react-dom": "17 || 18 || 19"
+  },
+  "dependencies": {
+  }
+}
